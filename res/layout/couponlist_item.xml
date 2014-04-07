@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#0000ff00"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/couponitem_layout_1"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/couponitem_img_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/imagesingle"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder_loading" />
+
+        <ImageView
+            android:id="@+id/couponitem_img_overdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/couponitem_img_pic"
+            android:layout_alignTop="@id/couponitem_img_pic"
+            android:background="@drawable/overdate"
+            android:scaleType="fitXY"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/couponitem_text_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/couponitem_layout_1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/couponitem_layout_1"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#454545"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/couponitem_layout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/couponitem_text_name"
+        android:layout_centerVertical="true"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/couponitem_text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥29"
+            android:textColor="#f7691c"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/couponitem_text_oldprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/couponitem_text_price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/couponitem_text_price"
+            android:text="¥0"
+            android:textColor="#a0978c"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/couponitem_layout_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/couponitem_layout_2"
+        android:layout_below="@id/couponitem_layout_2"
+        android:layout_marginTop="30dp"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/couponitem_text_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/couponitem_text_date"
+            android:layout_alignBottom="@+id/couponitem_text_date"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/couponitem_text_date"
+            android:text="浏览数(0)"
+            android:textColor="#989084" />
+
+        <TextView
+            android:id="@+id/couponitem_text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="有效期：0天  "
+            android:textColor="#989084"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

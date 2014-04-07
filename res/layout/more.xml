@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/more"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 头部黑条 -->
+
+    <include
+        android:id="@+id/more_include_head"
+        layout="@layout/more_head" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/more_include_head"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
+
+            <LinearLayout
+                android:id="@+id/more_linearlayout_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_feedback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/moreandmore_feedback"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttom_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/moreandmore_update"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_linearlayout_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/more_linearlayout_1"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_tellfriend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/moreandmore_tellfriend"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_shareToWeChat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/moreandmore_shareToWeChat"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_shareToSina"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttom_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/moreandmore_shareToSina"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_linearlayout_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/more_linearlayout_2"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/top_buttom_corner"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10.0dip" >
+
+                <TextView
+                    android:id="@+id/maybeyoulike"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1.0"
+                    android:maxLines="2"
+                    android:paddingRight="6.0dip"
+                    android:text="@string/moreandmore_maybeyoulike"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ff000000"
+                    android:textSize="18.0sp" />
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_maybeyoulike"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_buttom_corner"
+                    android:orientation="horizontal" >
+
+                    <!-- 存放可能还喜欢的图片 -->
+
+                    <ImageButton
+                        android:id="@+id/more_imgbtn_maybeyoulike_1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/wechat"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageButton
+                        android:id="@+id/more_imgbtn_maybeyoulike_2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/wechat"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_linearlayout_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/more_linearlayout_3"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_help"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/more_textview_userhelp"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_aboutus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_border"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:maxLines="2"
+                        android:paddingRight="6.0dip"
+                        android:text="@string/more_textview_aboutus"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_contactus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_border"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text="@string/more_textview_contactus"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text="@string/ourphone"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_linearlayout_contactus_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/buttom_corner"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip" >
+
+                    <TextView
+                        android:layout_width="0.0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:layout_weight="1.0"
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text="@string/more_textview_contactus"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text="@string/ourphone_1"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingRight="6.0dip"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/shoplist_layout_index_top_city"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+
+        <ImageButton
+            android:id="@+id/shoplist_btn_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/shoplist_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="哈尔滨"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/shoplist_btn_city" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_marginLeft="5dp" -->
+        <!-- android:layout_toRightOf="@id/shoplist_text_city" -->
+        <!-- android:background="@drawable/arrow_down" /> -->
+
+        <EditText
+            android:id="@+id/shoplist_edit_search"
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/shoplist_btn_back"
+            android:background="@drawable/search_bar_button_background_normal"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            android:hint="@string/searchhint"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/shoplist_layout_chose"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/shoplist_layout_index_top_city"
+        android:background="@drawable/shoplist_chose_bg"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/shoplist_layout_orgin"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_orgin_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+
+            <LinearLayout
+                android:id="@+id/shoplistinfo_layout_orgin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" >
+
+                <TextView
+                    android:id="@+id/shoplist_text_orgin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="全部区域"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/shoplist_btn_orgin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_orgin_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/orgin_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_filter_divider" />
+
+        <FrameLayout
+            android:id="@+id/shoplist_layout_classify"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_classify_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+
+            <LinearLayout
+                android:id="@+id/shoplistinfo_layout_classify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/shoplist_text_classify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="全部分类"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/shoplist_btn_classify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_classify_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/classify_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_filter_divider" />
+
+        <FrameLayout
+            android:id="@+id/shoplist_layout_orderby"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_orderby_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+
+            <LinearLayout
+                android:id="@+id/shoplistinfo_layout_orderby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" >
+
+                <TextView
+                    android:id="@+id/shoplist_text_orderby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="默认排序"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/shoplist_btn_orderby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/shoplist_btn_orderby_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/screen_background_white" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/shoplist_layout_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/shoplist_layout_chose"
+        android:background="#eaebeb" >
+
+        <LinearLayout
+            android:id="@+id/shoplist_layout_middle_netloading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/shoplist_loading_process_dialog_progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/loading_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shoplist_layout_middle_neterror"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nodatahint"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/shoplist_btn_nettry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/nettry"
+                android:textSize="20sp"
+                android:visibility="invisible" >
+            </Button>
+        </LinearLayout>
+
+        <com.yl.whs.util.PullDownView
+            android:id="@+id/shoplist_pull_down_view_shop"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.yl.whs.util.PullDownView>
+
+        <!-- <ListView -->
+        <!-- android:id="@+id/shoplist_list_shop" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:cacheColorHint="#00000000" -->
+        <!-- android:divider="@drawable/divide_line" -->
+        <!-- android:visibility="invisible" > -->
+
+
+        <!-- </ListView> -->
+    </FrameLayout>
+
+</RelativeLayout>

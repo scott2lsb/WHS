@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/region_gridview"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/shoplist_linearLayout_kind_first"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/shoplist_listview_kind_first"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/shoplist_framelayout_kindfirstloading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/loading_style" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/shoplist_linearLayout_kind_second"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/kind_background"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/shoplist_framelayout_kindsecondloading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/loading_style" />
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/shoplist_listview_kind_second"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:clickable="false"
+                android:divider="#FFCC00"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

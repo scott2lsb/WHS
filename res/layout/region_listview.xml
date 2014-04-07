@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:minHeight="200dp"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/index_progressbar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="85dp"
+        android:layout_marginTop="85dp"
+        android:gravity="center"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/loading_style"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/index_linearlayout_areaerror"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="65dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/neterrorhint"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/index_button_arearefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/nettry"
+            android:textSize="20sp" >
+        </Button>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/index_listview_showregion"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

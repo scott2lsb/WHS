@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light"/>
+
     <style name="Theme.Dianping" parent="@android:style/Theme.Light">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowTitleSize">45.0dip</item>
@@ -16,7 +18,6 @@
         <item name="android:windowBackground">@color/window_background</item>
     </style>
 
-    <style name="AppTheme" parent="android:Theme.Light" />
 
     <style name="AnimBottom" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>

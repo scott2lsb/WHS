@@ -1,105 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yl.whs"
-    android:versionCode="18"
-    android:versionName="1.0" >
+          package="com.yl.whs"
+          android:versionCode="18"
+          android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="8"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 定位权限 gmy -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
-        android:name="com.yl.whs.map.BMapApiDemoApp"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.DianpingNoTitle.CustomerBackground" >
-        <activity android:name="com.yl.whs.activity.LoadingActivity" >
+            android:name="com.yl.whs.map.BMapApiDemoApp"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        <activity android:name="com.yl.whs.activity.LoadingActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.yl.whs.activity.HelpActivity" >
+
+        <activity android:name="com.yl.whs.activity.HelpActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.MainActivity" >
+
+        <activity android:name="com.yl.whs.activity.MainActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.IndexActivity" >
+
+        <activity android:name="com.yl.whs.activity.IndexActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.SearchKeywordActivity" />
-        <activity android:name="com.yl.whs.activity.CouponInfoActivity" >
+
+        <activity android:name="com.yl.whs.activity.SearchKeywordActivity"/>
+
+        <activity android:name="com.yl.whs.activity.CouponInfoActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.MoreActivity" >
+
+        <activity android:name="com.yl.whs.activity.MoreActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.ShopInfoActivity" >
+
+        <activity android:name="com.yl.whs.activity.ShopInfoActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.ShopListActivity" >
+
+        <activity android:name="com.yl.whs.activity.ShopListActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.LoginActivity" >
+
+        <activity android:name="com.yl.whs.activity.LoginActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.RegisterActivity" >
+
+        <activity android:name="com.yl.whs.activity.RegisterActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.MineActivity" >
+
+        <activity android:name="com.yl.whs.activity.MineActivity">
         </activity>
-        <activity android:name="com.yl.whs.activity.SettingActivity" >
+
+        <activity android:name="com.yl.whs.activity.SettingActivity">
         </activity>
+
         <!-- 店铺列表activity -->
-        <activity android:name="com.yl.whs.activity.ShopRemarkListActivity" />
+        <activity android:name="com.yl.whs.activity.ShopRemarkListActivity"/>
+
         <!-- 地图定位 gmy -->
         <activity
-            android:name="com.yl.whs.activity.LocationOverlay"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+                android:name="com.yl.whs.activity.LocationOverlay"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"/>
+
         <activity
-            android:name="com.yl.whs.activity.FeedbackActivity"
-            android:label="@string/title_activity_feedback" >
+                android:name="com.yl.whs.activity.FeedbackActivity"
+                android:label="@string/title_activity_feedback">
         </activity>
+
         <activity
-            android:name="com.yl.whs.activity.AboutUsActivity"
-            android:label="@string/title_activity_about_us" >
+                android:name="com.yl.whs.activity.AboutUsActivity"
+                android:label="@string/title_activity_about_us">
         </activity>
+
         <activity
-            android:name="com.yl.whs.activity.UserHelpActivity"
-            android:label="@string/title_activity_user_help" >
+                android:name="com.yl.whs.activity.UserHelpActivity"
+                android:label="@string/title_activity_user_help">
         </activity>
+
         <!-- 店铺相册界面 by gmy -->
 
-        <activity android:name="com.yl.whs.activity.ShopAlbumActivity" />
+        <activity android:name="com.yl.whs.activity.ShopAlbumActivity"/>
+
         <activity
-            android:name="com.yl.whs.activity.FullPicActivity"
-            android:theme="@android:style/Theme.Translucent" />
-        <activity android:name="com.yl.whs.activity.SubmitRemarkActivity" />
-        <activity android:name="com.yl.whs.activity.UserRemarkActivity" />
-        <activity android:name="com.yl.whs.activity.BusAndHoursActivity" />
-        <activity android:name="com.yl.whs.activity.RemarkInfoActivity" />
-        <activity android:name="com.yl.whs.activity.MyCollectActivity" />
+                android:name="com.yl.whs.activity.FullPicActivity"
+                android:theme="@android:style/Theme.Translucent"/>
 
-        <service android:name="com.yl.whs.service.LocationService" >
+        <activity android:name="com.yl.whs.activity.SubmitRemarkActivity"/>
+
+        <activity android:name="com.yl.whs.activity.UserRemarkActivity"/>
+
+        <activity android:name="com.yl.whs.activity.BusAndHoursActivity"/>
+
+        <activity android:name="com.yl.whs.activity.RemarkInfoActivity"/>
+
+        <activity android:name="com.yl.whs.activity.MyCollectActivity"/>
+
+        <service android:name="com.yl.whs.service.LocationService">
             <intent-filter>
-
                 <!-- 为该Service组件的intent-filter配置action -->
-                <action android:name="com.yl.whs.service.LocationService" />
+                <action android:name="com.yl.whs.service.LocationService"/>
             </intent-filter>
         </service>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 定位权限 gmy -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

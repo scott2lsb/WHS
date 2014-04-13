@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/busandhours_layout_index_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+
+        <ImageButton
+            android:id="@+id/busandhours_btn_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/busandhours_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:text="交通、营业时间及其他"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/busandhours_layout_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/busandhours_layout_index_top"
+        android:background="#eaebeb"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/busAndhour_layout_hours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/busAndhour_imageview_hours"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/hours" />
+
+            <TextView
+                android:id="@+id/busAndhour_text_hourstext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/busAndhour_imageview_hours"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/busAndhour_imageview_hours"
+                android:gravity="left"
+                android:text="营业时间"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/busAndhour_text_hours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/busAndhour_layout_hours"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="7dp"
+            android:text="暂无营业时间信息" />
+
+        <ImageView
+            android:id="@+id/busAndhour_imageview_divideline_first"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/busAndhour_text_hours"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/divide_line"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/busAndhour_layout_bus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/busAndhour_imageview_divideline_first" >
+
+            <RelativeLayout
+                android:id="@+id/busAndhour_layout_bustitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/busAndhour_imageview_bus"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bus" />
+
+                <FrameLayout
+                    android:id="@+id/busAndhour_framelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/busAndhour_imageview_bus"
+                    android:layout_toRightOf="@id/busAndhour_imageview_bus" >
+
+                    <TextView
+                        android:id="@+id/busAndhour_text_bustext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:text="公交信息"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/busAndhour_img_share"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="50dp"
+                        android:background="@drawable/busandhour_share"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/busAndhour_text_businfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/busAndhour_layout_bustitle"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:text="暂无公交信息" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/busAndhour_imageview_divideline_second"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/busAndhour_layout_bus"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/divide_line"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+</RelativeLayout>

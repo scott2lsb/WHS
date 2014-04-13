@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/submitremark_layout_index_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+
+        <ImageButton
+            android:id="@+id/submitremark_btn_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/submitremark_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="添加点评"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/submitremark_layout_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/submitremark_layout_index_top"
+        android:background="#eaebeb" >
+
+        <LinearLayout
+            android:id="@+id/submitremark_layout_star"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/submitremark_imgbtn_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_favorite_icon_x"
+                android:padding="2dp"
+                android:src="@drawable/my_favorite_icon_normal" />
+
+            <ImageButton
+                android:id="@+id/submitremark_imgbtn_star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_favorite_icon_x"
+                android:padding="2dp" />
+
+            <ImageButton
+                android:id="@+id/submitremark_imgbtn_star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_favorite_icon_x"
+                android:padding="2dp" />
+
+            <ImageButton
+                android:id="@+id/submitremark_imgbtn_star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_favorite_icon_x"
+                android:padding="2dp" />
+
+            <ImageButton
+                android:id="@+id/submitremark_imgbtn_star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_favorite_icon_x"
+                android:padding="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/submitremark_layout_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submitremark_layout_star"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/submitremark_edit_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_bg_selector"
+                android:gravity="left|top"
+                android:hint="输入点评，人人为我，我为人人"
+                android:maxLength="500"
+                android:textSize="16sp"
+                android:imeOptions="actionSearch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/submitremark_layout_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submitremark_layout_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/submitremark_btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn_selector"
+                android:text="提    交"
+                android:textColor="@drawable/login_text_selector"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

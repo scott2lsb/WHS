@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_h4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="同步到：" android:layout_alignParentLeft="true" />
+        <CheckBox android:id="@id/share_weixin" android:background="@drawable/share_weixin_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" />
+        <CheckBox android:id="@id/share_weibo" android:background="@drawable/share_weibo_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" />
+        <CheckBox android:id="@id/share_renren" android:background="@drawable/share_renren_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" />
+        <CheckBox android:id="@id/share_qqzone" android:background="@drawable/share_qqzone_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" />
+        <CheckBox android:id="@id/share_qqweibo" android:background="@drawable/share_qqweibo_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_global_card_style" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <include layout="@layout/layout_buy_order_title" />
+        <LinearLayout android:orientation="vertical" android:id="@id/deal_num_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:id="@id/freight_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/freight_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_freight_lab" style="@style/pay_lab" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:id="@id/freight_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/pay_value" />
+            <TextView android:gravity="right" android:id="@id/freight" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/pay_value" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/total_price_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/total_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_total_price_lab" android:ems="5" style="@style/pay_lab" />
+            <TextView android:textColor="@color/red" android:gravity="right" android:id="@id/total" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/pay_value" />
+        </LinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <include layout="@layout/bind_phone" />
+    <TextView android:id="@id/consignee_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/buy_consignee_lab" style="@style/pay_title" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_global_card_style" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <TextView android:id="@id/consignee" android:background="@drawable/list_row_selector" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:drawableRight="@drawable/ic_arrow_right" style="@style/pay_lab" />
+        <RelativeLayout android:id="@id/delivery_time_content" android:background="@drawable/list_row_selector" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black2" android:id="@id/delivery_time_show" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:id="@id/delivery_time_click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_choose_again" android:drawableRight="@drawable/ic_arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <EditText android:textColor="#ff333333" android:id="@id/delivery_remark" android:background="@drawable/bg_global_card_style" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:hint="@string/buy_delivery_remark_hint" android:lines="2" style="@style/default_edit" />
+    <TextView android:id="@id/delivery_comment_lab" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_delivery_comment_lab" style="@style/pay_title" />
+    <EditText android:textColor="#ff333333" android:id="@id/delivery_comment" android:background="@drawable/bg_global_card_style" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:hint="" android:lines="2" style="@style/pay_input" />
+    <include layout="@layout/layout_buy_refund_tips" />
+</LinearLayout>

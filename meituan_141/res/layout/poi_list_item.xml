@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="4.0dip" android:paddingTop="5.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/rl_content" android:background="@drawable/listitem_background" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/image" android:layout_width="80.0dip" android:layout_height="80.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <ImageView android:layout_gravity="top|left|center" android:id="@id/preferential" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_global_lable_favorable" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <TextView android:textSize="@dimen/text_size_h5" android:textColor="@color/black1" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="5.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="4.0dip">
+                <RatingBar android:id="@id/avg_score_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="14.0dip" android:minHeight="14.0dip" android:numStars="5" android:stepSize="0.1" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+                <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/price_pre" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/avg_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/red" android:id="@id/lowest_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/price_after" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/poi_lowest_price_after" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="@color/black2" android:id="@id/cate" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black2" android:id="@id/area" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/text_size_h8" android:textColor="@color/black3" android:id="@id/distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

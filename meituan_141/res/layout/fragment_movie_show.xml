@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="30.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:id="@id/movie_show_title" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/movie_show" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/green_horizontal_separator" />
+    <TextView android:textSize="@dimen/text_size_h7" android:textColor="@color/black2" android:layout_gravity="center_horizontal" android:id="@id/empty_text" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_with_3point" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.sankuai.meituan.poi.movie.SlowGallery android:gravity="center_vertical" android:id="@id/images_gallery" android:paddingTop="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spacing="6.0dip" android:unselectedAlpha="1.0" />
+        <View android:background="@drawable/movie_up_arrow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/movie_info_layout" android:background="@drawable/list_row_selector" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black1" android:id="@id/movie_name" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/movie_ver" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_movie_label_3d" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/yellow" android:id="@id/movie_score" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                </LinearLayout>
+                <TextView android:textSize="14.0sp" android:textColor="@color/black3" android:layout_gravity="center_vertical" android:id="@id/movie_length" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+        </LinearLayout>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/gray_horizontal_separator" />
+        <HorizontalScrollView android:id="@id/showDate_layout" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/showDate" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+        <View android:background="#ffcccccc" android:layout_width="wrap_content" android:layout_height="1.0px" />
+        <TextView android:gravity="center" android:id="@id/nodata" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="75.0dip" android:text="@string/movie_data_empty" />
+        <TextView android:textColor="@color/tips_orange" android:gravity="center_vertical" android:id="@id/time_before_sold_out_tips" android:background="@drawable/bg_tips_yellow" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_prompt_purchase_info" android:drawablePadding="8.0dip" />
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/show_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/gray_horizontal_separator" android:showDividers="middle" />
+    </LinearLayout>
+</LinearLayout>

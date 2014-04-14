@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.sankuai.meituan.common.map.views.MTMapView android:id="@id/map_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:apiKey="@string/mapabc_key" />
+        <ImageButton android:id="@id/btn_back" android:background="@drawable/bg_poi_map_back" android:layout_width="54.0dip" android:layout_height="45.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/ic_map_back" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:onClick="onClick" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="15.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ImageButton android:id="@id/btn_zoom_in" android:background="@drawable/btn_bottombar_top_half_selector" android:layout_width="45.0dip" android:layout_height="45.0dip" android:src="@drawable/ic_zoom_in" android:onClick="onClick" />
+            <View android:id="@id/divider" android:background="@color/border_gray" android:layout_width="fill_parent" android:layout_height="0.100000024dip" />
+            <ImageButton android:id="@id/btn_zoom_out" android:background="@drawable/btn_bottombar_bottom_half_selector" android:layout_width="45.0dip" android:layout_height="45.0dip" android:src="@drawable/ic_zoom_out" android:onClick="onClick" />
+        </LinearLayout>
+        <ImageButton android:id="@id/btn_location" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginBottom="15.0dip" android:src="@drawable/ic_map_location" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:onClick="onClick" style="@style/bottombar_button" />
+    </RelativeLayout>
+    <View android:background="@color/border_gray" android:layout_width="fill_parent" android:layout_height="0.100000024dip" />
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@color/black1" android:id="@id/name" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/black3" android:id="@id/addr" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <LinearLayout android:gravity="center" android:id="@id/view_route" android:background="@drawable/poi_map_button_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onClick">
+                <TextView android:textSize="15.0dip" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看路线" android:drawableLeft="@drawable/ic_business_map_btn_viewroute" android:drawablePadding="8.0dip" />
+            </LinearLayout>
+            <android.support.v7.widget.Space android:layout_width="8.0dip" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center" android:id="@id/view_map" android:background="@drawable/poi_map_button_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onClick">
+                <TextView android:textSize="15.0dip" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本机地图" android:drawableLeft="@drawable/ic_business_map_btn_localmap" android:drawablePadding="8.0dip" />
+            </LinearLayout>
+            <android.support.v7.widget.Space android:visibility="gone" android:layout_width="8.0dip" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center" android:id="@id/report_error" android:background="@drawable/poi_map_button_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onClick">
+                <TextView android:textSize="15.0dip" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="报错" android:drawableLeft="@drawable/ic_business_map_btn_error" android:drawablePadding="8.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.actionbarsherlock.internal.widget.IcsLinearLayout android:background="@drawable/bg_index_menu" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/group" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/deal" android:drawableTop="@drawable/ic_menu_deal_selector" android:layout_weight="1.0" style="@style/BottomTab" />
+    <TextView android:id="@id/nearby" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/poi" android:drawableTop="@drawable/ic_menu_around_selector" android:layout_weight="1.0" style="@style/BottomTab" />
+    <FrameLayout android:id="@id/mine" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/mine" android:drawableTop="@drawable/ic_menu_mine_selector" style="@style/BottomTab" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/mine_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/ic_reminder" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/settings" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/more" android:drawableTop="@drawable/ic_menu_settings_selector" style="@style/BottomTab" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/settings_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/ic_reminder" />
+    </FrameLayout>
+</com.actionbarsherlock.internal.widget.IcsLinearLayout>

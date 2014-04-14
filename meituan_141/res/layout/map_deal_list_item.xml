@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_deal_map_list_selector" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ic_category_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@drawable/ic_pin_default" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff3399cc" android:id="@id/txt_deal_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="7.0dip" android:layout_alignParentRight="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/txt_deal_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/txt_deal_price" android:layout_toRightOf="@id/ic_category_pin" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/txt_deal_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="50.0dip" android:singleLine="true" android:layout_toRightOf="@id/ic_category_pin" android:layout_below="@id/txt_deal_title" />
+</RelativeLayout>

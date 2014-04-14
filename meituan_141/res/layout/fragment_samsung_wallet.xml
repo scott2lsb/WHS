@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="#ff820023" android:layout_gravity="center" android:id="@id/tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    <ImageView android:layout_gravity="center" android:id="@id/download_wallet" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:src="@drawable/swallet_download" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/transparent_vertical_separator" android:showDividers="middle">
+        <ImageView android:id="@id/view_ticket" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:src="@drawable/swallet_view" />
+        <ImageView android:id="@id/add_ticket" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:src="@drawable/swallet_load" />
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

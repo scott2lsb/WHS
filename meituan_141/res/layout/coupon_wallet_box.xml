@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom" android:background="@drawable/bg_wallet_box" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="7.0dip" />
+    <TextView android:textSize="11.0sp" android:textColor="#ffc5b5a5" android:gravity="center" android:layout_gravity="bottom" android:id="@id/wallet_tips" android:background="@drawable/bg_wallet_tips" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/coupon_wallet_tips" android:singleLine="true" />
+</FrameLayout>

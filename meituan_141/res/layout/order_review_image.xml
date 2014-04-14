@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imageview" android:background="@color/transparent" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/bg_comment_upload_camera_selector" android:scaleType="centerCrop" />
+        <com.sankuai.meituan.review.uploadimage.CircularProgressBar android:layout_gravity="center" android:id="@id/image_progress" android:background="#88999999" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/update_failed" android:background="#88999999" android:padding="16.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_comment_unload_photo_failed" />
+    </FrameLayout>
+</LinearLayout>

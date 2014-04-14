@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/delivery_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收货人信息" style="@style/pay_title" />
+    <View android:layout_width="fill_parent" style="@style/pay_divider_no_margin_bottom" />
+    <RelativeLayout android:id="@id/delivery_container" android:padding="5.0dip" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/order_container">
+        <TextView android:id="@id/delivery_name_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="姓名：" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/delivery_name_lab" android:layout_alignBaseline="@id/delivery_name_lab" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_phone_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电话：" android:layout_toLeftOf="@id/delivery_phone" android:layout_alignBaseline="@id/delivery_phone" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_address_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地址：" android:layout_below="@id/delivery_name_lab" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/delivery_address_lab" android:layout_below="@id/delivery_name_lab" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_postcode_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="邮编：" android:layout_below="@id/delivery_address" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_postcode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/delivery_postcode_lab" android:layout_below="@id/delivery_address" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_time_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="送货时间：" android:layout_below="@id/delivery_postcode_lab" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="只工作日送货" android:layout_toRightOf="@id/delivery_time_lab" android:layout_below="@id/delivery_postcode_lab" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_remark_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="配送说明：" android:layout_below="@id/delivery_time" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_remark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/delivery_remark_lab" android:layout_below="@id/delivery_time" style="@style/consignee_value" />
+        <TextView android:id="@id/delivery_comment_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="备注：" android:layout_below="@id/delivery_remark_lab" style="@style/consignee_lab" />
+        <TextView android:id="@id/delivery_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/delivery_comment_lab" android:layout_below="@id/delivery_remark_lab" style="@style/consignee_value" />
+    </RelativeLayout>
+</LinearLayout>

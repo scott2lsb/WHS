@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingTop="5.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/content_layout" android:background="@drawable/listitem_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image" android:layout_width="64.0dip" android:layout_height="82.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18.0dip" android:textColor="@color/black1" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无人区" android:singleLine="true" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/type_3d" android:paddingLeft="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_movie_list_lable_type_3d" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/type_new" android:paddingLeft="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_movie_list_lable_type_new" />
+                <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="18.0dip" android:textColor="@color/yellow" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="44" />
+                <TextView android:textSize="12.0dip" android:textColor="@color/yellow" android:id="@id/score_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textSize="15.0dip" android:id="@id/scm" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="影评硬皮灰姑娘" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0dip" android:id="@id/time_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1分钟" />
+                <TextView android:textSize="15.0dip" android:id="@id/category" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

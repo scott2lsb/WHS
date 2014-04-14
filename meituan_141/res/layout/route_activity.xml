@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sankuai.meituan.common.map.views.MTMapView android:id="@id/map_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:apiKey="@string/mapabc_key" />
+    <SlidingDrawer android:id="@id/sliding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:handle="@id/handle" android:content="@id/listview">
+        <LinearLayout android:orientation="vertical" android:id="@id/handle" android:background="@drawable/route_list_bg" android:layout_width="fill_parent" android:layout_height="75.0dip">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/below_arror" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/map_route_arror" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/above_arror" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/above_arror" />
+            <TextView android:textSize="17.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/road" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/length" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="1.0dip" />
+            <View android:background="#ffdedede" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="5.0dip" />
+        </LinearLayout>
+        <ListView android:id="@id/listview" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0px" android:alpha="0.9" />
+    </SlidingDrawer>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="8.0dip" android:layout_alignLeft="@id/map" android:layout_alignTop="@id/map">
+        <ImageButton android:id="@id/btn_back" android:background="@drawable/btn_map_back_selector" android:layout_width="54.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_map_back" android:onClick="onClick" android:contentDescription="@string/back" style="@style/topbar_button" />
+    </LinearLayout>
+    <ImageButton android:id="@id/btn_location" android:visibility="gone" android:layout_width="54.0dip" android:layout_height="40.0dip" android:layout_marginLeft="7.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_map_location" android:layout_alignLeft="@id/map" android:layout_alignBottom="@id/map" android:onClick="onClick" android:contentDescription="@string/refresh" style="@style/bottombar_button" />
+</RelativeLayout>

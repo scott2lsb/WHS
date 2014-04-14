@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:background="@drawable/com_tenpay_keybg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_1" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="1" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_2" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="2" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_3" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="3" android:layout_weight="1.0" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_4" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="4" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_5" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="5" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_6" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="6" android:layout_weight="1.0" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_7" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="7" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_8" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="8" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_9" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="9" android:layout_weight="1.0" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="22.0sp" android:textColor="#ffffffff" android:id="@id/tenpay_keyboard_x" android:background="@drawable/com_tenpay_android_keybtn_bottom" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="2.0dip" android:text="字母X" android:layout_weight="1.0" />
+            <Button android:textSize="30.0sp" android:id="@id/tenpay_keyboard_0" android:background="@drawable/com_tenpay_android_keybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="0" android:layout_weight="1.0" />
+            <ImageButton android:textSize="30.0sp" android:id="@id/tenpay_keyboard_d" android:background="@drawable/com_tenpay_android_keybtn_bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:src="@drawable/com_tenpay_android_keybtn_delete" android:layout_weight="1.0" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

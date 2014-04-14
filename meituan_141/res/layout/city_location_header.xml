@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:gravity="center_vertical" android:id="@id/city_loc_text" android:layout_width="wrap_content" android:layout_height="50.0dip" android:text="未定位到城市" android:layout_centerVertical="true" />
+    <FrameLayout android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <Button android:textSize="@dimen/text_size_h4" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/city_loc_button" android:background="@drawable/bg_cornered_green" android:layout_width="80.0dip" android:layout_height="40.0dip" android:text="乌鲁木齐" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/city_loc_button_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleSmall" />
+    </FrameLayout>
+</RelativeLayout>

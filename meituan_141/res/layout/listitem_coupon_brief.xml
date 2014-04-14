@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/bg_coupon_single_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="41.0">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/ic_mt_coupon" android:contentDescription="@string/coupon" />
+        <RelativeLayout android:gravity="fill" android:id="@id/title_container" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_toRightOf="@id/icon" android:layout_alignTop="@id/icon">
+            <TextView android:textColor="#ff5c5c5c" android:id="@id/title_suffix" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentRight="true" style="?android:attr/textAppearanceMedium" />
+            <TextView android:textColor="#ff5c5c5c" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/title_suffix" style="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+        <TextView android:textColor="@color/black2" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_toRightOf="@id/icon" android:layout_below="@id/title_container" android:layout_alignLeft="@id/title_container" style="?android:attr/textAppearanceSmall" />
+        <TextView android:textColor="@*android:color/white" android:gravity="center" android:id="@id/count" android:background="@drawable/bg_coupon_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true" style="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+    <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" />
+</LinearLayout>

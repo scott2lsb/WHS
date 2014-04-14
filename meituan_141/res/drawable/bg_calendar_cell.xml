@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true">
+        <color android:color="#ff32b8ad" />
+    </item>
+    <item android:state_pressed="true">
+        <color android:color="#ff99dcd7" />
+    </item>
+    <item app:state_cell_enabled="false">
+        <color android:color="#fff0f0f0" />
+    </item>
+    <item>
+        <color android:color="#fff9f9f9" />
+    </item>
+</selector>

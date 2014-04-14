@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/map_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/progress_bar_style" />
+        <com.sankuai.meituan.common.map.views.MTMapView android:id="@id/map_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:apiKey="@string/mapabc_key" />
+        <ListView android:layout_gravity="bottom|center" android:id="@id/middle_list" android:background="@drawable/map_popup_bg" android:visibility="gone" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0px" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="8.0dip" android:layout_alignLeft="@id/map" android:layout_alignTop="@id/map">
+        <ImageButton android:id="@id/btn_back" android:background="@drawable/btn_map_back_selector" android:layout_width="54.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_map_back" android:onClick="onClick" style="@style/topbar_button" />
+        <TextView android:id="@id/category" android:background="@drawable/btn_map_category_selector" android:layout_width="188.0dip" android:layout_height="fill_parent" android:layout_marginLeft="7.0dip" android:shadowColor="#66000000" android:shadowDx="1.0" android:drawablePadding="3.0dip" style="@style/topbar_button" />
+    </LinearLayout>
+    <ImageButton android:id="@id/btn_zoom_in" android:background="@drawable/btn_bottombar_top_half_selector" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/ic_zoom_in" android:layout_above="@id/btn_zoom_out" android:layout_alignParentRight="true" android:onClick="onClick" />
+    <ImageButton android:id="@id/btn_zoom_out" android:background="@drawable/btn_bottombar_bottom_half_selector" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/ic_zoom_out" android:layout_above="@id/btn_location" android:layout_alignParentRight="true" android:onClick="onClick" />
+    <View android:background="@drawable/bottom_divider" android:layout_width="36.0dip" android:layout_height="0.100000024dip" android:layout_marginRight="12.0dip" android:layout_below="@id/btn_zoom_in" android:layout_alignParentRight="true" />
+    <ImageButton android:id="@id/btn_location" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginRight="7.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_map_location" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onClick" style="@style/bottombar_button" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="260.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_coupon_ticket_location_normal" android:paddingLeft="14.0dip" android:paddingRight="22.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="19.0" android:showDividers="middle">
+        <LinearLayout android:orientation="vertical" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取票机位置：" />
+            <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:id="@id/machine_position" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="如何取票：" />
+            <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:id="@id/machine_howto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <ImageView android:id="@id/machine_icon" android:background="@drawable/bg_coupon_ticket_location_gray" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_weight="14.0" />
+</LinearLayout>

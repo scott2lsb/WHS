@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/order_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/order_detail" />
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle|end">
+            <TextView android:textSize="16.0sp" android:id="@id/order_id" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/order_time" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/mobile" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/pay_time" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/count" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/amount" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#ffaa7711" android:id="@id/delivery_tip" android:background="@drawable/bg_coupon_take_tiket_yellow" android:paddingLeft="12.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/order_delivery_tip" android:drawableLeft="@drawable/ic_prompt_purchase_info" android:drawablePadding="10.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <Button android:textSize="@dimen/text_size_h4" android:textColor="@*android:color/white" android:id="@id/cancel_refund" android:background="@drawable/bg_cornered_orange" android:layout_width="0.0dip" android:layout_height="44.0dip" android:text="@string/cancel_refund" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/text_size_h4" android:textColor="@*android:color/white" android:id="@id/request_refund" android:background="@drawable/bg_cornered_red" android:layout_width="0.0dip" android:layout_height="44.0dip" android:text="@string/request_refund" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

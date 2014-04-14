@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sankuai.meituan.coupon.view.CodeHeaderView android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:background="@drawable/bg_coupon_detail_listitem_footer" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="103.0">
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:id="@id/code_index" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.sankuai.meituan.base.widget.CopiedTextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="@color/black1" android:id="@id/code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:textIsSelectable="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/qrcode_container" android:background="@drawable/bg_qrcode" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+                <ImageView android:id="@id/qrcode" android:layout_width="140.0dip" android:layout_height="140.0dip" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" layout="@layout/layout_third_party_exchange_tips" />
+        </LinearLayout>
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+    </LinearLayout>
+</LinearLayout>

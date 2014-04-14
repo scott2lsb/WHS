@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:background="#ffe7e7e7" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.meituan.android.widget.EditTextWithClearButton android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/search_edit" android:background="@drawable/bg_edit_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:singleLine="true" android:drawableLeft="@drawable/ic_search" android:layout_weight="1.0" android:imeOptions="actionSearch" />
+        <Button android:textColor="@color/black2" android:gravity="center" android:id="@id/search" android:background="@drawable/btn_near_toolbar_selector" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginRight="10.0dip" android:text="@string/search" />
+    </LinearLayout>
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/history" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/default_listview" />
+        <include android:id="@id/hot_search_layout" layout="@layout/hot_search_layout" />
+    </FrameLayout>
+</LinearLayout>

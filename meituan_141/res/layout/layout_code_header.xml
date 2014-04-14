@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/bg_coupon_detail_listitem_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+    <LinearLayout android:paddingTop="12.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="103.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:contentDescription="@string/coupon" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="13.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textColor="#ff5c5c5c" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="?android:attr/textAppearanceMedium" />
+            <TextView android:textColor="@color/black2" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" style="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+    <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+</LinearLayout>

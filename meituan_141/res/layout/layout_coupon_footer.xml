@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="#ffaa7711" android:gravity="center" android:id="@id/refund_tips" android:background="@drawable/bg_tips_yellow" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/refund_tips" android:drawableLeft="@drawable/ic_prompt_purchase_info" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:src="@drawable/btn_share_coupon_selector" />
+</LinearLayout>

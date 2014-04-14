@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/route_top_bg" android:paddingBottom="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:layout_width="36.0dip" android:layout_height="88.0dip" android:src="@drawable/route_icon" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/exchange" android:background="@drawable/list_row_selector" android:layout_width="36.0dip" android:layout_height="88.0dip" android:src="@drawable/exchange" android:scaleType="center" android:layout_alignParentRight="true" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/from_addlayout" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_toRightOf="@id/icon">
+            <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black1" android:gravity="center_vertical" android:id="@id/from_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的位置" android:singleLine="true" />
+            <ImageView android:id="@id/from_arror" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_routelist_dropdown_arrow" android:layout_toRightOf="@id/from_add" android:layout_alignBottom="@id/from_add" />
+        </RelativeLayout>
+        <View android:id="@id/split1" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginRight="18.0dip" android:layout_toLeftOf="@id/exchange" android:layout_toRightOf="@id/icon" android:layout_below="@id/from_addlayout" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/to_addlayout" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_toRightOf="@id/icon" android:layout_below="@id/split1">
+            <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black2" android:gravity="center_vertical" android:id="@id/to_add" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+            <ImageView android:id="@id/to_arror" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_dropdown_arrow" android:layout_toRightOf="@id/to_add" />
+        </RelativeLayout>
+        <View android:id="@id/split" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignBottom="@id/icon" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/content" android:background="#fffbfbfb" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_below="@id/to_addlayout">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/bus" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bus_selector" android:scaleType="center" />
+                <View android:layout_gravity="bottom" android:id="@id/bus_bottom_divider" android:background="@color/green" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginLeft="4.0dip" />
+            </FrameLayout>
+            <View android:id="@id/split" android:background="#ffcccccc" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="7.0dip" android:layout_marginBottom="10.0dip" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/drive" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/drive_selector" android:scaleType="center" />
+                <View android:layout_gravity="bottom" android:id="@id/drive_bottom_divider" android:background="@color/green" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginRight="4.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

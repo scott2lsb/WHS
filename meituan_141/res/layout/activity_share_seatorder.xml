@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/order_container" android:background="@color/faint_yellow" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/order_pwd" android:layout_weight="1.0" />
+                <CheckBox android:id="@id/order_checked" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:checked="true" android:button="@drawable/ic_check" />
+            </LinearLayout>
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle|end">
+                <TextView android:textSize="16.0sp" android:id="@id/origin_id" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/phone_number" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/verification_code" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/cinema_container" android:background="@color/faint_yellow" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cinema_addr" android:layout_weight="1.0" />
+                <CheckBox android:id="@id/cinema_checked" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:checked="true" android:button="@drawable/ic_check" />
+            </LinearLayout>
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle|end">
+                <TextView android:textSize="16.0sp" android:id="@id/cinema_name" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/cinema_address" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="16.0sp" android:id="@id/cinema_phone" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/seat_container" android:background="@color/faint_yellow" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/seat_info" android:layout_weight="1.0" />
+                <CheckBox android:id="@id/seat_checked" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:checked="true" android:button="@drawable/ic_check" />
+            </LinearLayout>
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle|end">
+                <TextView android:textSize="16.0sp" android:id="@id/movie" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/show" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/seat" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    </LinearLayout>
+</ScrollView>

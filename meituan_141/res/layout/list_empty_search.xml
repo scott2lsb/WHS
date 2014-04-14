@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="54.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/empty" android:background="@drawable/search_empty_header_bg" android:layout_width="fill_parent" android:layout_height="54.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_search_empty" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="#ff9d704f" android:id="@id/result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_empty_tips1" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffc2a081" android:id="@id/recommend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/search_empty_tips2" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

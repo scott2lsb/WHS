@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_global_card_style" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:showDividers="middle">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/token_layout" android:background="@drawable/list_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/token_hint_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_token" android:layout_centerVertical="true" style="@style/pay_lab" />
+            <TextView android:textColor="@color/black1" android:gravity="right|center" android:id="@id/use_token" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_use_token" android:drawableRight="@drawable/ic_arrow_right" android:drawablePadding="3.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/pay_value" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/point_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/black2" android:id="@id/point_hint_lab" android:background="@drawable/list_row_selector" android:paddingLeft="10.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:text="@string/payorder_use_point" android:drawableRight="@drawable/ic_use_point_tip" android:drawablePadding="3.0dip" style="@style/pay_lab" />
+            <RelativeLayout android:gravity="right|center" android:id="@id/use_point_layout" android:background="@drawable/list_row_selector" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/text_size_h8" android:textColor="@color/black1" android:id="@id/point_exchange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/use_point" />
+                <TextView android:textSize="@dimen/text_size_h10" android:textColor="@color/black3" android:id="@id/point_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/point_exchange" android:layout_alignRight="@id/point_exchange" />
+                <CheckBox android:id="@id/use_point" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="8.0dip" android:button="@drawable/ic_check" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/balance_layout" android:background="@drawable/list_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/balance_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_remaining_sum" android:ems="5" style="@style/pay_lab" />
+            <TextView android:textColor="@color/black1" android:gravity="right" android:id="@id/remaining_sum" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/use_balance" android:layout_toRightOf="@id/balance_lab" style="@style/pay_value" />
+            <CheckBox android:id="@id/use_balance" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:checked="true" android:button="@drawable/ic_check" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/need_pay_layout" android:background="@drawable/list_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/need_pay_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_need_pay" android:ems="5" style="@style/pay_lab" />
+            <TextView android:textColor="@color/red" android:gravity="right" android:id="@id/need_pay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/need_pay_lab" style="@style/pay_value" />
+        </RelativeLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

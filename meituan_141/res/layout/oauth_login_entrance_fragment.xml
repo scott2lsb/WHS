@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SlidingDrawer android:orientation="vertical" android:id="@id/oauth_login_sliding_drawer" android:layout_width="fill_parent" android:layout_height="120.0dip" android:handle="@id/oauth_login_title" android:content="@id/oauth_login_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center_horizontal" android:id="@id/oauth_login_title" android:background="@drawable/account_oauth_login_sliding_drawer_header" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/login_title_joint" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/oauth_login_content" android:background="#0d000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <ImageView android:id="@id/image_sina" android:background="@drawable/oauth_login_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/account_ic_oauth_sina" android:contentDescription="@string/login_sina" />
+        <ImageView android:id="@id/image_qq" android:background="@drawable/oauth_login_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/account_ic_oauth_qq" android:contentDescription="@string/login_qq" />
+        <ImageView android:id="@id/image_baidu" android:background="@drawable/oauth_login_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/account_ic_oauth_baidu" android:contentDescription="@string/login_baidu" />
+    </LinearLayout>
+</SlidingDrawer>

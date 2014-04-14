@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="@color/black1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/settings" />
+    <View android:background="@drawable/green_horizontal_separator" android:layout_width="fill_parent" android:layout_height="4.0px" />
+    <RadioGroup android:id="@id/font_size_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="17.0sp" android:textColor="@color/black2" android:id="@id/small_size" android:paddingLeft="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:button="@null" android:text="@string/font_size_small" android:drawableLeft="@drawable/ic_setting_fontsize_small" android:drawableRight="@drawable/circle_radio_btn_selector" android:drawablePadding="6.0dip" />
+        <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RadioButton android:textSize="17.0sp" android:textColor="@color/black2" android:id="@id/medium_size" android:paddingLeft="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:checked="true" android:button="@null" android:text="@string/font_size_medium" android:drawableLeft="@drawable/ic_setting_fontsize_medium" android:drawableRight="@drawable/circle_radio_btn_selector" android:drawablePadding="6.0dip" />
+        <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RadioButton android:textSize="17.0sp" android:textColor="@color/black2" android:id="@id/large_size" android:paddingLeft="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:button="@null" android:text="@string/font_size_large" android:drawableLeft="@drawable/ic_setting_fontsize_large" android:drawableRight="@drawable/circle_radio_btn_selector" android:drawablePadding="6.0dip" />
+        <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RadioButton android:textSize="17.0sp" android:textColor="@color/black2" android:id="@id/extra_large_size" android:paddingLeft="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:button="@null" android:text="@string/font_size_extra_large" android:drawableLeft="@drawable/ic_setting_fontsize_extra_large" android:drawableRight="@drawable/circle_radio_btn_selector" android:drawablePadding="6.0dip" />
+        <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </RadioGroup>
+</LinearLayout>

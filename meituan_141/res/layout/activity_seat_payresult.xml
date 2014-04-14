@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/payresult_layout_main" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="35.0dip" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="17.0sp" android:textColor="@color/black2" android:gravity="center_vertical" android:id="@id/payresult_text_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8.0dip" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/black3" android:id="@id/payresult_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/machine_layout" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/ticket_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="影院：" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:gravity="left" android:id="@id/cinema_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电影：" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:gravity="left" android:id="@id/movie_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="场次：" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:gravity="left" android:id="@id/show" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="座位：" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:gravity="left" android:id="@id/seats" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip">
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="总价：" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:gravity="left" android:id="@id/price" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:background="@drawable/bg_payment_result_tips" android:layout_width="fill_parent" android:layout_height="61.0dip" android:layout_marginTop="21.0dip">
+                    <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_ticket_item_maoyan" android:layout_weight="1.0" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ff7a755e" android:id="@id/seat_payresult_qupiao" android:paddingLeft="8.0dip" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0" />
+                </LinearLayout>
+            </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="20.0dip">
+            <Button android:textSize="15.0sp" android:textColor="@*android:color/white" android:gravity="center" android:id="@id/payresult_btn_view_order" android:background="@drawable/bg_cornered_orange" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="1.0" />
+            <Button android:textSize="15.0sp" android:id="@id/payresult_btn_next_step" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/green_button" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/recommend" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/list_row_selector" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:duplicateParentState="true" android:layout_width="27.0dip" android:layout_height="27.0dip" android:src="@drawable/ic_oauth_sina_weibo_authorized" android:scaleType="fitXY" />
+    <TextView android:textSize="@dimen/text_size_h6" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/oauth_name" android:paddingLeft="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/share_deal_settings_sina" android:layout_weight="1.0" android:layout_centerVertical="true" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/black1" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_deal_settings_username_unbind" android:drawablePadding="6.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</LinearLayout>

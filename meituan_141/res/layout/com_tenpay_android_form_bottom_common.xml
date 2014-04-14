@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:background="@drawable/com_tenpay_android_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <Button android:textSize="13.0sp" android:textColor="#ff999999" android:id="@id/tenpay_freepay_protocol_btn" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_tenpay_android_protocol" android:onClick="onProtocolBtnClick" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff999999" android:id="@id/tenpay_freepay_kefu_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="客服电话: " android:layout_below="@id/tenpay_freepay_protocol_btn" />
+        <Button android:textSize="13.0sp" android:textColor="#ff999999" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/com_tenpay_android_tel_num" android:layout_toRightOf="@id/tenpay_freepay_kefu_txt" android:layout_below="@id/tenpay_freepay_protocol_btn" android:onClick="onTenpayTelnumClick" />
+    </RelativeLayout>
+</LinearLayout>

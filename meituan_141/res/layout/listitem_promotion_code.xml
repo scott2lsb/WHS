@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sankuai.meituan.coupon.view.CodeHeaderView android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:background="@drawable/bg_coupon_detail_listitem_footer" android:paddingTop="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="103.0" android:showDividers="middle">
+            <com.sankuai.meituan.base.widget.CopiedTextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/black1" android:id="@id/code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="4.0dip" android:textIsSelectable="true" />
+            <FrameLayout android:id="@id/tips" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_third_party_exchange_tips" />
+            </FrameLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+    </LinearLayout>
+</LinearLayout>

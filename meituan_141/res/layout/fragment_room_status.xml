@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/cl" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="房态信息" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/calendar_divider_color" android:paddingLeft="1.0px" android:paddingRight="1.0px" android:paddingBottom="1.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:id="@id/scroll" android:background="#ffe9e9e9" android:padding="3.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/gallery_date" android:layout_width="wrap_content" android:layout_height="46.0dip" />
+            </HorizontalScrollView>
+            <FrameLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/ics_room" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle|end|beginning" />
+            </FrameLayout>
+            <FrameLayout android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/layout_hotel_reservation_tips" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/button_container" android:paddingTop="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="right" android:id="@id/button" android:text="查看未来30天房态" style="@style/Widget.CorneredGreenButton" />
+        </FrameLayout>
+    </LinearLayout>
+</com.actionbarsherlock.internal.widget.IcsLinearLayout>

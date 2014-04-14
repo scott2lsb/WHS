@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/voucher_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.meituan.android.widget.AutofitTextView android:textSize="30.0sp" android:textColor="@*android:color/white" android:gravity="center" android:id="@id/value" android:background="#ff35bbb0" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="82.0dip" android:layout_height="82.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip">
+            <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/text_color_selector" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/text_color_tertiary_selector" android:id="@id/code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+            <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/text_color_secondary_selector" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:paddingLeft="9.0dip" android:paddingTop="9.0dip" android:paddingRight="12.0dip" android:paddingBottom="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/text_color_tertiary_selector" android:gravity="center" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_vouchers_time" android:drawablePadding="4.0dip" />
+        <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/text_color_tertiary_selector" android:id="@id/expired" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

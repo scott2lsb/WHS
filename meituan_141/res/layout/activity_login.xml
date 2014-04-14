@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sankuai.meituan.login.LoginScrollView android:id="@id/login_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/login_deal_item_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_username_password" android:background="#ffffffff" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip">
+                <com.meituan.android.widget.AutoCompleteTextViewWithClearButton android:textSize="@dimen/text_size_h6" android:textColor="#ff000000" android:textColorHint="@color/black3" android:id="@id/edit_username" android:background="@drawable/bg_edit_selector" android:paddingLeft="10.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/login_username" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+                <com.meituan.android.widget.EditTextWithClearButton android:textSize="@dimen/text_size_h6" android:textColor="#ff000000" android:textColorHint="@color/black3" android:id="@id/edit_password" android:background="@drawable/bg_edit_selector" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:hint="@string/login_password" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionDone" />
+                <LinearLayout android:gravity="center_vertical" android:id="@id/captcha_zone" android:paddingTop="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="@dimen/text_size_h6" android:layout_gravity="bottom" android:id="@id/captcha" android:background="@drawable/bg_edit_selector" android:paddingLeft="10.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textCapCharacters|textEmailAddress" />
+                    <FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="104.0dip" android:layout_height="40.0dip" android:layout_marginBottom="1.0dip">
+                        <ProgressBar android:layout_gravity="center" android:id="@id/captcha_loading_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/progress_bar_style_small" />
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/captcha_image" android:layout_width="84.0dip" android:layout_height="40.0dip" android:scaleType="fitXY" />
+                    </FrameLayout>
+                    <TextView android:id="@id/tv_captcha_change" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_captcha_change" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_login_register" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+                <FrameLayout android:id="@id/layout_login" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:textSize="@dimen/text_size_h3" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_login" android:background="@drawable/bg_cornered_green" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/login_signin" />
+                    <ProgressBar android:layout_gravity="right|center" android:id="@id/login_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" style="@style/progress_bar_style_small" />
+                </FrameLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/green" android:id="@id/register" android:background="@drawable/list_row_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_register" android:drawablePadding="5.0dip" />
+                    <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/green" android:id="@id/dynamic_login" android:background="@drawable/list_row_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_login_without_account" android:drawablePadding="5.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.sankuai.meituan.login.LoginScrollView>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/oauth_entrance_fragment" android:layout_width="fill_parent" android:layout_height="120.0dip" />
+</FrameLayout>

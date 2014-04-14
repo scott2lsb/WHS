@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:id="@id/top_progress" android:layout_width="fill_parent" android:layout_height="3.0dip" android:max="100" android:indeterminate="false" style="@style/progress_bar_style_horizontal" />
+        <include layout="@layout/center_progress" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/navigation_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:id="@id/btn_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="80.0dip" android:src="@drawable/ic_webview_bar_back_disable" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/btn_forward" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_webview_bar_forward_disable" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/btn_refresh" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="80.0dip" android:src="@drawable/ic_webview_bar_refresh_normal" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/header" android:background="@drawable/bg_coupon_detail_listitem_header" android:paddingTop="24.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+            <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="103.0">
+                <ImageView android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_maoyan" android:contentDescription="@string/coupon" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:id="@id/movie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:id="@id/cinema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:id="@id/show_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:id="@id/seat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+            <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+        </LinearLayout>
+        <LinearLayout android:background="@drawable/bg_coupon_detail_listitem_footer" android:paddingTop="6.0dip" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="103.0">
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/origin_id_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="订单号 :" />
+                        <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black1" android:id="@id/origin_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机号 :" />
+                        <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black1" android:id="@id/phone_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/verification_code_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="验证码 :" />
+                        <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black1" android:id="@id/verification_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/qrcode_container" android:background="@drawable/bg_qrcode" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <ImageView android:id="@id/qrcode" android:layout_width="140.0dip" android:layout_height="140.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" />
+        </LinearLayout>
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_coupon_take_tiket_yellow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:divider="@drawable/dotted_yellow" android:showDividers="middle">
+            <TextView android:textSize="@dimen/text_size_h6" android:textColor="@color/black1" android:id="@id/take_place" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_coupon_take_ticket" android:drawablePadding="10.0dip" />
+            <TextView android:textSize="@dimen/text_size_h6" android:textColor="#ffaa7711" android:id="@id/show_take_place" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="查看取票机位置" android:drawableRight="@drawable/ic_global_arrow_right_brown" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="20.0dip">
+            <ImageView android:background="@drawable/bg_wallet_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/text_size_h9" android:textColor="@color/black3" android:gravity="center" android:id="@id/phone" android:paddingLeft="34.0dip" android:paddingRight="34.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/btn_share_coupon_selector" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

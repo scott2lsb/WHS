@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/android_map2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/deal_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/map_deal_image" android:layout_width="96.0dip" android:layout_height="60.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="6.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="3.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/map_deal_title" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:lines="2" />
+            <RelativeLayout android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="@color/green" android:id="@id/map_deal_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff29a1c7" android:id="@id/map_deal_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:layout_toRightOf="@id/map_deal_desc" />
+                <RatingBar android:id="@id/rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:progressDrawable="@drawable/map_rating_bg" android:numStars="5" android:isIndicator="true" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:src="@drawable/map_arror_right" android:contentDescription="contentDescription" />
+    </LinearLayout>
+</FrameLayout>

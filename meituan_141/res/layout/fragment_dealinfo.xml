@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/base_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle|beginning">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:divider="@drawable/gray_vertical_separator" android:showDividers="middle">
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/refund_anytime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:singleLine="true" android:drawableLeft="@drawable/ic_not_support_refund" android:drawablePadding="3.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/refund_expire" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@drawable/ic_not_support_refund" android:drawablePadding="3.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/sales" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:singleLine="true" android:drawableLeft="@drawable/ic_pay_count" android:drawablePadding="3.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:id="@id/remaining_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@drawable/ic_left_time" android:drawablePadding="3.0dip" />
+            </LinearLayout>
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/rating_layout" android:background="@drawable/list_row_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <RatingBar android:id="@id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black3" android:id="@id/rating_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black3" android:id="@id/rating_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableRight="@drawable/ic_arrow_right" android:drawablePadding="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hotel_service" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:enabled="false" android:textSize="12.0dip" android:textColor="@color/black3" android:gravity="center" android:id="@id/hotel01" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:enabled="false" android:textSize="12.0dip" android:textColor="@color/black3" android:gravity="center" android:id="@id/hotel02" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:enabled="false" android:textSize="12.0dip" android:textColor="@color/black3" android:gravity="center" android:id="@id/hotel03" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:enabled="false" android:textSize="12.0dip" android:textColor="@color/black3" android:gravity="center" android:id="@id/hotel04" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/notification" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:id="@id/notification_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dealinfo_notification_title" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/red" android:id="@id/notification_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+        </LinearLayout>
+        <View android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/merchant_layout" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:divider="?android:divider" android:showDividers="middle">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/merchant_info" />
+            <include layout="@layout/listitem_branch" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="right" android:id="@id/all_branch_button" android:layout_marginTop="16.0dip" style="@style/Widget.CorneredGreenButton" />
+        </FrameLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/service_plan_layout" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+        <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:id="@id/service_plan_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/service_plan" />
+        <LinearLayout android:orientation="vertical" android:id="@id/service_plan" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle">
+        <TextView android:textSize="@dimen/text_size_h7" android:textColor="#ffe95830" android:id="@id/tv_third_party_form" android:paddingTop="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="left" android:id="@id/show_homeinns_room_status" android:visibility="gone" android:text="@string/homeinns_room_status" style="@style/Widget.CorneredGreenButton" />
+            <Button android:layout_gravity="right" android:id="@id/check_detail_info_button" android:text="@string/check_detail_info" style="@style/Widget.CorneredGreenButton" />
+        </FrameLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <FrameLayout android:id="@id/room_status" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/purchase_notes_layout" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+        <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/purchase_notes" />
+        <TextView android:textSize="@dimen/text_size_h7" android:textColor="@color/black2" android:id="@id/purchase_notes" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="8.0dip" android:textIsSelectable="true" />
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

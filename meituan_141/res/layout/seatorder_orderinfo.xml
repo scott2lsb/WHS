@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/payorder_account_info" style="@style/pay_title" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_global_card_style" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/list_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_total_price_lab" style="@style/pay_lab" />
+            <TextView android:textColor="@color/black1" android:gravity="right|center" android:id="@id/price" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/pay_value" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/voucher_container" android:background="@drawable/list_row_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/voucher_label" style="@style/pay_lab" />
+            <TextView android:textColor="@color/black1" android:gravity="right|center" android:id="@id/voucher" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableRight="@drawable/ic_arrow_right" android:drawablePadding="2.0dip" android:layout_weight="1.0" style="@style/pay_value" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_remaining_sum" style="@style/pay_lab" />
+            <TextView android:textColor="@color/black1" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/seat_remain_not_support" android:layout_weight="1.0" style="@style/pay_value" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payorder_need_pay" style="@style/pay_lab" />
+            <TextView android:textColor="@color/red" android:gravity="right" android:id="@id/order_needpay" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/pay_value" />
+        </LinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

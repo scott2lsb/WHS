@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/gray_horizontal_separator" android:showDividers="middle|end">
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/image_layout" android:layout_width="111.0dip" android:layout_height="111.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:layout_gravity="top|left|center" android:id="@id/image_bg_1" android:visibility="gone" android:layout_width="105.0dip" android:layout_height="105.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:src="@color/bg_gray" android:adjustViewBounds="true" />
+                <ImageView android:layout_gravity="top|left|center" android:id="@id/image_bg_2" android:visibility="visible" android:layout_width="105.0dip" android:layout_height="105.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="3.0dip" android:src="#ffb8b8b8" android:adjustViewBounds="true" />
+                <ImageView android:layout_gravity="top|left|center" android:id="@id/image" android:layout_width="105.0dip" android:layout_height="105.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="bottom|right|center" android:id="@id/image_info" android:background="#33000000" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" />
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.sankuai.meituan.base.widget.CopiedTextView android:textSize="20.0sp" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/price_layout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/poi_avg_price_text" />
+                    <TextView android:textSize="18.0sp" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RatingBar android:layout_gravity="bottom" android:id="@id/avg_scroe_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:maxHeight="4.0dip" android:minHeight="14.0dip" android:numStars="5" android:stepSize="0.1" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/yellow" android:gravity="center" android:id="@id/avg_score_text" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black3" android:gravity="center" android:id="@id/comment_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/phone_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.sankuai.meituan.base.widget.CopiedTextView android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/phone" android:background="@drawable/list_row_selector" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_business_detail_phone" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textIsSelectable="true" />
+            <ImageView android:layout_width="1.0px" android:layout_height="fill_parent" android:src="@drawable/gray_horizontal_separator" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/green" android:layout_gravity="center_vertical" android:id="@id/phone_layout" android:background="@drawable/list_row_selector" android:paddingLeft="20.0dip" android:paddingTop="15.0dip" android:paddingRight="20.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/telephone" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/addr_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.sankuai.meituan.base.widget.CopiedTextView android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/addr" android:background="@drawable/list_row_selector" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_business_detail_mark" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textIsSelectable="true" />
+            <ImageView android:layout_width="1.0px" android:layout_height="fill_parent" android:src="@drawable/gray_horizontal_separator" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/green" android:layout_gravity="center_vertical" android:id="@id/route_layout" android:background="@drawable/list_row_selector" android:paddingLeft="20.0dip" android:paddingTop="15.0dip" android:paddingRight="20.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/merchant_view_route" />
+        </LinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/favorite" android:background="@drawable/bg_cornered_orange" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="11.0">
+            <ImageView android:id="@id/favorite_image" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_favorite_selector_new" android:scaleType="center" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/favorite_progress" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" style="?android:attr/progressBarStyle" />
+            <TextView android:textSize="15.0sp" android:textColor="@*android:color/white" android:id="@id/favorite_text" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收藏店铺" />
+        </LinearLayout>
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:id="@id/share" android:background="@drawable/bg_cornered_green" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="5.0">
+            <TextView android:textSize="15.0sp" android:textColor="@*android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分享" android:drawableLeft="@drawable/ic_business_detail_share" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+        <android.support.v7.widget.Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:id="@id/correct_poi_info" android:background="@drawable/bg_cornered_green" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="5.0">
+            <TextView android:textSize="15.0sp" android:textColor="@*android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="报错" android:drawableLeft="@drawable/ic_business_detail_info" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/deals" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/food_layout" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/gray_horizontal_separator" android:showDividers="middle|end">
+        <LinearLayout android:orientation="horizontal" android:id="@id/features_dishes_layout" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="特色菜品" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:id="@id/features_dishes" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_info" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/style_layout" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/poi_style" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:id="@id/style" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_info" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/parking_info_layout" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/poi_parking_info" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:id="@id/parking_info" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_info" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/wifi_layout" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/poi_wifi_title" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:id="@id/wifi" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_info" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/introduction_layout" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/poi_introduction" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:ellipsize="end" android:id="@id/introduction" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_info" android:maxLines="3" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="right" android:id="@id/btn_open_intro" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    <FrameLayout android:id="@id/poi_comment" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/poi_comment_line" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@drawable/gray_horizontal_separator" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/old_deals_layout" android:background="@drawable/list_row_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:paddingLeft="5.0dip" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/old_deals_title" android:drawableLeft="@drawable/ic_business_detail_history" android:drawablePadding="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/black3" android:layout_gravity="center_vertical" android:id="@id/old_deals_count" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+    </LinearLayout>
+    <ImageView android:id="@id/old_deals_line" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@drawable/gray_horizontal_separator" />
+    <FrameLayout android:id="@id/around_deal_recommend" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textColorHint="@color/black4" android:id="@id/input" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/please_input_voucher_code" android:lines="1" android:inputType="number" />
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="beginning">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/gray_vertical_separator" android:showDividers="middle">
+            <Button android:textSize="@dimen/text_size_h7" android:textColor="@color/black1" android:gravity="center" android:id="@id/cancel" android:background="@drawable/list_row_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size_h7" android:textColor="@color/black1" android:gravity="center" android:id="@id/confirm" android:background="@drawable/list_row_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/confirm" android:layout_weight="1.0" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

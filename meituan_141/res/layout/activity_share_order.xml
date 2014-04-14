@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/share_coupon_password" />
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/code_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+        <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:divider="@drawable/line_green_bold" android:showDividers="middle">
+            <TextView android:textSize="@dimen/text_size_h4" android:textColor="@color/black1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/share_coupon_address_title" />
+            <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:id="@id/merchant_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:divider" android:showDividers="middle" />
+        </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+    </LinearLayout>
+</ScrollView>

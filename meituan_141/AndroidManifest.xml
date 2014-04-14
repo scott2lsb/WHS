@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="141" android:versionName="4.4.1" android:installLocation="auto" package="com.sankuai.meituan"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.sankuai.common.PERMISSION" android:protectionLevel="signature" />
+    <uses-permission android:name="com.sankuai.common.PERMISSION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application android:theme="@style/App" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.sankuai.meituan.MeituanApplication" android:hardwareAccelerated="true" android:largeHeap="true">
+        <meta-data android:name="APP_NAME" android:value="group" />
+        <meta-data android:name="channel" android:value="test" />
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="294a3bb3442dd09506566216073b6fe5" />
+        <meta-data android:name="uuid_priority" android:value="3.0" />
+        <provider android:name="com.sankuai.common.uuid.provider.MeituanUUIDProvider" android:permission="com.sankuai.common.PERMISSION" android:authorities="com.sankuai.meituan.UUIDprovider" />
+        <provider android:name="com.sankuai.meituan.GroupAccountSyncProvider" android:permission="com.sankuai.common.PERMISSION" android:exported="true" android:authorities="com.sankuai.meituan.account.sync" />
+        <activity android:theme="@style/App.Welcome" android:name="com.sankuai.meituan.activity.Welcome" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.activity.GuideLineActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/App.SimpleList" android:name="com.sankuai.meituan.activity.MainActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/list" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/merchant/group/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/merchant/group/list" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/merchant/all/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/near/merchant/all/list" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/user/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/user" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/setting/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/setting" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/home" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/home/" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/App.SimpleList" android:name="com.sankuai.meituan.deal.DealListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal/list" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.index.IndexDealListActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/recommend/personal" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/recommend/hot" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/deal_detail" android:name="com.sankuai.meituan.deal.DealDetailActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activity.MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/deal/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/deal" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal/about" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/deal_comment" android:name="com.sankuai.meituan.deal.comment.CommentListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/App.NoTitleBar" android:name="com.sankuai.meituan.deal.comment.CommentAlbumActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/poi_comment" android:name="com.sankuai.meituan.poi.reporterror.PoiInfoErrorActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/poi_comment" android:name="com.sankuai.meituan.poi.comment.PoiCommentListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.common.map.NearDealListMap" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.poi.PoiMapActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.common.map.NearPoiMap" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/merchant_info" android:name="com.sankuai.meituan.deal.branch.BranchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/choose_bank" android:name="com.sankuai.meituan.seat.banklist.BankListForSeatActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Album" android:name="com.sankuai.meituan.review.uploadimage.OrderReviewImageActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:theme="@style/Album" android:name="com.sankuai.meituan.deal.album.DealAlbumActivity" android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/deal/albums" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.common.map.RouteActivity" android:exported="false" android:excludeFromRecents="true" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.common.map.RouteListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/route" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.common.map.SelectPointActivity" android:exported="false" android:excludeFromRecents="true" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.search.SearchActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/search" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/search/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/search" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/search/" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
+        <activity android:theme="@style/App.OrderList" android:label="@string/order" android:name="com.sankuai.meituan.order.OrderListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order/list" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order/list/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order/list" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.MerchantLocationErrorMap" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/order_detail" android:name="com.sankuai.meituan.order.OrderDetailActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.order.LotteryResultActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/edit_order_review_label" android:name="com.sankuai.meituan.review.EditOrderReviewActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order/review/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/order/review" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order/review/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/order/review" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.category.CategoryActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/my_coupon" android:name="com.sankuai.meituan.coupon.CouponWalletActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon/list" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon/list/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon/list" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/my_coupon" android:name="com.sankuai.meituan.coupon.CouponCodeActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/ticket_machine" android:name="com.sankuai.meituan.coupon.TicketMachineActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/user_coupon_detail_label" android:name="com.sankuai.meituan.coupon.CouponDetailActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon/detail/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/coupon/detail" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon/detail/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/coupon/detail" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/user_coupon_detail_label" android:name="com.sankuai.meituan.coupon.SeatCouponDetailActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.base.CommonWebViewActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/web/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/web" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/web/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/web" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.base.AdvertWebViewActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.notify.RecommendActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/recommend/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/recommend" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/recommend/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/recommend" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/daily_new_deal" android:name="com.sankuai.meituan.notify.DailyNewDealActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/daily_new_deal" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/login" android:name="com.sankuai.meituan.login.LoginActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/signin/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/signin" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/signin/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/signin" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/quick_login_without_account" android:name="com.sankuai.meituan.login.DynamicLoginActivity" android:windowSoftInputMode="stateUnspecified|adjustUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/dynamiclogin/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/dynamiclogin" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/signup" android:name="com.sankuai.meituan.signup.SignupActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/signup" android:name="com.sankuai.meituan.signup.NickNameSignupActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.sankuai.meituan.city.CityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <receiver android:name="com.sankuai.meituan.widget.DealWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_LAST" />
+                <action android:name="android.appwidget.action.APPWIDGET_NEXT" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/deal_widget" />
+        </receiver>
+        <receiver android:name="com.sankuai.meituan.notify.DealReceiver" />
+        <receiver android:name="com.sankuai.meituan.notify.CouponReceiver" />
+        <receiver android:name="com.sankuai.meituan.notify.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PROXY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sankuai.meituan.push.PushTokenReceiver">
+            <intent-filter>
+                <action android:name="com.sankuai.mtmp.token.receive" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sankuai.meituan.notify.push.PushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.sankuai.mtmp.message.receive" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.sankuai.mtmp.service.MtmpService" android:enabled="false">
+            <intent-filter>
+                <action android:name="com.sankuai.mtmp.service.start" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.sankuai.mtmp.receiver.NetworkReceiver" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sankuai.mtmp.receiver.CommunicateReceiver">
+            <intent-filter>
+                <action android:name="com.sankuai.mtmp.COMMUNICATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sankuai.mtmp.token.receive" />
+            </intent-filter>
+            <meta-data android:name="MTMP_VERSION" android:value="0.7.2" />
+            <meta-data android:name="MTMP_APPKEY" android:value="9e050bfd9196e4b1ccfb1e9e8859344ef969071d8432cd99683aeb936f6fe87151a0a2fddf69e7e575889d337fa6b79951a0a2fddf69e7e575889d337fa6b799756669ff2d51c44d10286c0e7a6e91b2" />
+            <meta-data android:name="MTMP_DEBUG" android:value="false" />
+        </receiver>
+        <activity android:label="@string/retrieve_password" android:name="com.sankuai.meituan.retrievepassword.RetrievePasswordActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.bindphone.BindPhoneWebActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.oauthlogin.OauthLoginActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/select_address" android:name="com.sankuai.meituan.address.AddressListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.address.AddressEditActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.deal.map.DealWithMap" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/settings_share_settings" android:name="com.sankuai.meituan.setting.ShareSettingsActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/settings_share_meituan" android:name="com.sankuai.meituan.setting.ShareMeituanActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/settings_meituan_guide" android:name="com.sankuai.meituan.setting.AboutMeituanActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/settings_push_toggle" android:name="com.sankuai.meituan.setting.PushSettingsActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/push_log" android:name="com.sankuai.meituan.push.PushLogActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/settings_feedback" android:name="com.sankuai.meituan.setting.feedback.FeedbackActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/feedback/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/feedback" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/feedback/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/feedback" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/settings_feedback" android:name="com.sankuai.meituan.setting.feedback.CustomerSuggestionActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/suggestion/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/suggestion" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/suggestion/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/suggestion" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/other_apps_title" android:name="com.sankuai.meituan.setting.otherapps.OtherAppsActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/buy_submit_order" android:name="com.sankuai.meituan.buy.BuyActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/buy/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/buy" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/buy/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/buy" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/submitorder/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/submitorder" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/submitorder/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/submitorder" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/payorder_confirm_order" android:name="com.sankuai.meituan.buy.PayOrderActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/choose_bank" android:name="com.sankuai.meituan.buy.BanksActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/pay_title" android:name="com.sankuai.meituan.buy.PayWebActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/buy_title" android:name="com.sankuai.meituan.pay.BuyByWebviewActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.umpay.creditcard.android.UmpayActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:label="@string/lottery_title" android:name="com.sankuai.meituan.pay.Lottery" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/ActivityDialogTheme" android:label="@string/payorder_confirm_order" android:name="com.sankuai.meituan.pay.PayCheckActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/pay_result_title" android:name="com.sankuai.meituan.pay.PayResultActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.seat.SelectSeatActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/selectseat/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/selectseat" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/selectseat/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/selectseat" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.seat.WdSeatActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/seat_pay_order" android:name="com.sankuai.meituan.seat.PaySeatActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/seat_order_payresult" android:name="com.sankuai.meituan.seat.SeatPayResult" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/user_admin_activity_label" android:name="com.sankuai.meituan.user.UserAdminActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/account/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/account" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/account/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/account" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/user_name_modify" android:name="com.sankuai.meituan.user.ModifyUserNameActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/user_password_modify" android:name="com.sankuai.meituan.user.ModifyPasswordActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/user_password_modify" android:name="com.sankuai.meituan.user.ResetPasswordActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/user_my_cards_title" android:name="com.sankuai.meituan.user.MyCardsActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/favorite_activity_label" android:name="com.sankuai.meituan.user.favorite.FavoriteActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/collection/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/collection/list" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/collection/list/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/collection/list" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.refund.RefundActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/voucher" android:name="com.sankuai.meituan.voucher.VoucherListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/voucher/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/voucher/list" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/voucher/list/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/voucher/list" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/use_voucher" android:name="com.sankuai.meituan.voucher.VoucherVerifyActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/use_voucher" android:name="com.sankuai.meituan.voucher.SeatVoucherSelectActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/bind_phone_number" android:name="com.sankuai.meituan.bindphone.PhoneBindActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:label="@string/express_detail" android:name="com.sankuai.meituan.express.ExpressActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/ShareDialogTheme" android:label="@string/share" android:name="com.sankuai.meituan.share.ShareDialogActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/share" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.share.ShareDealActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/share_coupon" android:name="com.sankuai.meituan.share.order.ShareOrderActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/share_coupon" android:name="com.sankuai.meituan.share.ShareSeatOrderActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/user_user_unlock" android:name="com.sankuai.meituan.userlocked.UserUnlockActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/poi_album" android:name="com.sankuai.meituan.poi.PoiAlbumGridActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Album" android:label="@string/poi_album" android:name="com.sankuai.meituan.poi.PoiAlbumActivity" android:launchMode="standard" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:label="@string/old_deals_title" android:name="com.sankuai.meituan.poi.OldDealListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/hotel_30_room_status" android:name="com.sankuai.meituan.hotel.CalendarRoomStatusActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/movie_detail" android:name="com.sankuai.meituan.poi.movie.MovieCinemaListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/movie/cinemalist" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/movie_detail" android:name="com.sankuai.meituan.poi.movie.MovieDetailActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/movie" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.poi.movie.MovieListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/movielist" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sankuai.meituan.poi.PoiDetailActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/merchant/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/merchant" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/merchant/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/merchant" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/hot_topic" android:name="com.sankuai.meituan.topic.TopicActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/hottopic/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/hottopic" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/hottopic/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/hottopic" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.tenpay.android.oneclickpay.open.PayActivity" android:screenOrientation="behind" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.tenpay.android.oneclickpay.open.ProtocolActivity" android:screenOrientation="behind" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/weixin_pay_title" android:name="com.sankuai.meituan.wxapi.WXPayEntryActivity" android:exported="true" />
+        <activity android:label="@string/app_name" android:name="com.sankuai.meituan.wxapi.WXEntryActivity" android:exported="true" />
+        <activity android:label="@string/notice" android:name="com.sankuai.meituan.user.message.MessageActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/message/list/" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/message/list" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/message/list/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/message/list" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/around_deals" android:name="com.sankuai.meituan.around.deal.AroundDealListActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/around/deal" />
+                <data android:scheme="imeituan" android:host="www.meituan.com" android:path="/around/deal" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/around/deal/" />
+                <data android:scheme="iMeituan" android:host="www.meituan.com" android:path="/around/deal" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/dev_mode" android:name="com.sankuai.meituan.dev.DevModeActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/dev_mode" android:name="com.sankuai.meituan.dev.AdvancedDevModeActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/settings_font_size" android:name="com.sankuai.meituan.setting.FontSizeActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.homeinns.HomeinnsBookActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.sankuai.meituan.share.OauthShareActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+    </application>
+</manifest>

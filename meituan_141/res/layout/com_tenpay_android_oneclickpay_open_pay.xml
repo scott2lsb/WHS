@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/tenpay_title_bar_layout" android:background="@color/com_tenpay_title_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/com_tenpay_title_bar">
+            <ImageButton android:layout_gravity="center_vertical" android:id="@id/tenpay_back_btn" android:background="@drawable/com_tenpay_android_back_btn_bg" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/com_tenpay_android_back_pressed" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tenpay_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="银行卡一键支付" android:layout_toRightOf="@id/tenpay_back_btn" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tenpay_welcome_layout" android:background="#b2000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/com_tenpay_android_dialog_bg" android:layout_width="fill_parent" android:layout_height="160.0dip" android:layout_marginLeft="50.0dip" android:layout_marginRight="50.0dip">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="110.0dip">
+                    <ImageView android:background="@drawable/com_tenpay_android_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="银行授权，安全支付" />
+                </LinearLayout>
+                <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ProgressBar android:layout_width="27.0dip" android:layout_height="6.0dip" android:indeterminateDrawable="@drawable/com_tenpay_android_loading" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/tenpay_fill_bank_info_layout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/tenpay_bank_list_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:background="@color/com_tenpay_info_bg" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/com_tenpay_money_text" android:layout_gravity="center_vertical" android:id="@id/tenpay_new_card_price_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="123.4元" />
+                    <View android:layout_gravity="center_vertical" android:background="@color/com_tenpay_info_vertical_divider" android:layout_width="0.70000005dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_info_text" android:gravity="center_vertical" android:id="@id/tenpay_new_card_desc_txt" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="测试打桩的商品信息" />
+                </LinearLayout>
+                <View android:background="@color/com_tenpay_info_horizontal_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/com_tenpay_form_side_padding" android:layout_marginTop="15.0dip" android:layout_marginRight="@dimen/com_tenpay_form_side_padding">
+                    <com.tenpay.android.oneclickpay.open.TabTitle android:id="@id/tenpay_tab_credit_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <com.tenpay.android.oneclickpay.open.TabTitle android:id="@id/tenpay_tab_debit_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+                <View android:background="#ff33b5e5" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/com_tenpay_form_side_padding" android:layout_marginRight="@dimen/com_tenpay_form_side_padding" />
+                <com.tenpay.android.oneclickpay.open.FlowView android:id="@id/tenpay_bank_list_flowview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/com_tenpay_form_side_padding" android:layout_marginRight="@dimen/com_tenpay_form_side_padding" android:layout_marginBottom="10.0dip">
+                    <ListView android:scrollbarThumbVertical="@drawable/com_tenpay_android_fastscroll_thumb_default_holo" android:scrollbarTrackVertical="@drawable/com_tenpay_android_fastscroll_track_default_holo_light" android:scrollbarStyle="insideInset" android:id="@id/tenpay_select_credit_bank_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@*android:color/transparent" android:divider="@null" />
+                    <ListView android:scrollbarThumbVertical="@drawable/com_tenpay_android_fastscroll_thumb_default_holo" android:scrollbarTrackVertical="@drawable/com_tenpay_android_fastscroll_track_default_holo_light" android:scrollbarStyle="insideInset" android:id="@id/tenpay_select_debit_bank_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@*android:color/transparent" android:divider="@null" />
+                </com.tenpay.android.oneclickpay.open.FlowView>
+            </LinearLayout>
+            <ScrollView android:orientation="vertical" android:id="@id/tenpay_new_card_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:background="@color/com_tenpay_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/tenpay_price_product_layout" android:background="@color/com_tenpay_info_bg" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/com_tenpay_money_text" android:layout_gravity="center_vertical" android:id="@id/tenpay_new_card_price_txt2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                        <View android:layout_gravity="center_vertical" android:background="@color/com_tenpay_info_vertical_divider" android:layout_width="0.70000005dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_info_text" android:gravity="center_vertical" android:id="@id/tenpay_new_card_desc_txt2" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" />
+                    </LinearLayout>
+                    <View android:background="@color/com_tenpay_info_horizontal_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/com_tenpay_form_side_padding" android:paddingRight="@dimen/com_tenpay_form_side_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                        <com.tenpay.android.oneclickpay.open.BankCardIdEditText android:textSize="16.0sp" android:id="@id/tenpay_card_number_edt" android:hint="银行卡号" android:maxLength="25" style="@style/com_tenpay_android_form_row" />
+                        <com.tenpay.android.oneclickpay.open.BankCardValidThruEditText android:textSize="16.0sp" android:id="@id/tenpay_card_expire_edt" android:hint="有效期 " android:maxLength="5" style="@style/com_tenpay_android_form_row" />
+                        <com.tenpay.android.oneclickpay.open.BankCardCvvEditText android:textSize="16.0sp" android:id="@id/tenpay_card_cvv_edt" android:hint="CVV (卡背面后三位数字)" android:maxLength="3" style="@style/com_tenpay_android_form_row" />
+                        <EditText android:textSize="16.0sp" android:id="@id/tenpay_true_name_edt" android:hint="持卡人姓名" android:inputType="text" style="@style/com_tenpay_android_form_row" />
+                        <EditText android:textSize="16.0sp" android:id="@id/tenpay_people_id_edt" android:hint="身份证号" android:singleLine="true" android:maxLength="18" style="@style/com_tenpay_android_form_row" />
+                        <EditText android:textSize="16.0sp" android:id="@id/tenpay_mobile_phone_edt" android:hint="银行预留手机号码" android:maxLength="11" style="@style/com_tenpay_android_form_row" />
+                        <com.tenpay.android.oneclickpay.open.CheckBoxWithPaddingFix android:textSize="13.0sp" android:textColor="#ff999999" android:id="@id/tenpay_agree_protocol_chxbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:checked="true" android:button="@drawable/com_tenpay_android_btn_check" android:text="保存信息，下次即可一键支付" />
+                    </LinearLayout>
+                    <Button android:enabled="false" android:id="@id/tenpay_fill_bank_next_btn" android:clickable="false" android:text="获取验证码" style="@style/com_tenpay_android_submit_btn" />
+                    <include layout="@layout/com_tenpay_android_form_bottom_common" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <ScrollView android:id="@id/tenpay_binded_pay_layout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:background="@color/com_tenpay_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:background="@color/com_tenpay_info_bg" android:layout_width="fill_parent" android:layout_height="65.0dip">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/com_tenpay_money_text" android:layout_gravity="center_vertical" android:id="@id/tenpay_old_card_price_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                    <View android:layout_gravity="center_vertical" android:background="@color/com_tenpay_info_vertical_divider" android:layout_width="0.70000005dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_info_text" android:gravity="center_vertical" android:id="@id/tenpay_old_card_desc_txt" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" />
+                </LinearLayout>
+                <View android:background="@color/com_tenpay_info_horizontal_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/com_tenpay_form_side_padding" android:paddingRight="@dimen/com_tenpay_form_side_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <com.tenpay.android.oneclickpay.open.BankCardView android:id="@id/tenpay_old_card_info" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="20.0dip" />
+                </LinearLayout>
+                <Button android:id="@id/tenpay_confirm_pay_btn" android:text="确认，立即支付" style="@style/com_tenpay_android_submit_btn" />
+                <include layout="@layout/com_tenpay_android_form_bottom_common" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@id/tenpay_card_expire_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:background="@color/com_tenpay_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/com_tenpay_form_side_padding" android:paddingRight="@dimen/com_tenpay_form_side_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="5.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_form_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更新有效期" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_form_hint" android:gravity="right" android:id="@id/tenpay_expire_info_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <com.tenpay.android.oneclickpay.open.BankCardValidThruEditText android:textSize="16.0sp" android:id="@id/tenpay_update_card_expire_edt" android:hint="有效期 " android:maxLength="5" android:inputType="number" style="@style/com_tenpay_android_form_row" />
+                    <com.tenpay.android.oneclickpay.open.BankCardCvvEditText android:textSize="16.0sp" android:id="@id/tenpay_update_card_cvv_edt" android:hint="CVV (卡背面后三位数字)" android:maxLength="3" android:inputType="number" style="@style/com_tenpay_android_form_row" />
+                </LinearLayout>
+                <Button android:enabled="false" android:id="@id/tenpay_expire_submit_btn" android:clickable="false" android:text="获取验证码" style="@style/com_tenpay_android_submit_btn" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@id/tenpay_fill_verify_code_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:background="@color/com_tenpay_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/com_tenpay_form_side_padding" android:paddingRight="@dimen/com_tenpay_form_side_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/com_tenpay_form_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="短信验证" />
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <EditText android:textSize="16.0sp" android:id="@id/tenpay_verify_code_edt" android:layout_width="0.0dip" android:layout_height="@dimen/com_tenpay_form_edit_height" android:layout_marginTop="0.0dip" android:hint="短信验证码" android:maxLength="6" android:layout_weight="1.0" android:inputType="number" style="@style/com_tenpay_android_form_row" />
+                        <Button android:textSize="16.0sp" android:textColor="@color/com_tenpay_android_verify_resend_btn" android:id="@id/tenpay_send_again_verify_btn" android:background="@drawable/com_tenpay_android_btn_resend_selector" android:clickable="false" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="重新获取" />
+                    </LinearLayout>
+                    <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_form_hint" android:id="@id/tenpay_verify_info_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="短信验证码已发送至 186*****34" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/tenpay_old_card_with_bank_verify_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip">
+                        <ImageView android:background="@drawable/com_tenpay_android_border_line" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/com_tenpay_form_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="卡号验证" />
+                        <com.tenpay.android.oneclickpay.open.BankCardIdEditText android:textSize="16.0sp" android:id="@id/tenpay_verify_card_id_edt" android:hint="银行卡号" android:maxLength="23" android:inputType="number" style="@style/com_tenpay_android_form_row" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/com_tenpay_form_hint" android:id="@id/tenpay_verify_card_info_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="您的尾号为7839的招商银行信用卡的完整卡号" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:enabled="false" android:id="@id/tenpay_fill_verify_code_btn" android:clickable="false" android:text="验证并支付" style="@style/com_tenpay_android_submit_btn" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@id/tenpay_success_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:background="@color/com_tenpay_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/com_tenpay_title_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+                    <ImageView android:layout_gravity="center" android:background="@drawable/com_tenpay_android_success" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="支付成功" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/tenpay_success_new_card_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="银行卡已保存，下次一键即可支付" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/com_tenpay_form_side_padding" android:paddingRight="@dimen/com_tenpay_form_side_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff8b8b8b" android:id="@id/tenpay_success_product_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" />
+                    <TextView android:textSize="14.0sp" android:textColor="#ff8b8b8b" android:id="@id/tenpay_success_pay_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" />
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="#ff8b8b8b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付金额 : " />
+                        <TextView android:textSize="18.0sp" android:textColor="#ffee5400" android:id="@id/tenpay_success_amount_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:id="@id/tenpay_success_return_btn" android:text="返回" style="@style/com_tenpay_android_submit_btn" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.tenpay.android.oneclickpay.open.MyKeyboardWindow android:id="@id/tenpay_num_keyboard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/bind_phone_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/phone_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_bind_phone_lab" style="@style/pay_title" />
+        <TextView android:textSize="9.0sp" android:id="@id/phone_hint_lab" android:paddingLeft="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buy_bind_phone_hint" style="@style/pay_title" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/change_phone" android:background="@drawable/bg_single_white_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:id="@id/phone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/pay_lab" />
+        <TextView android:gravity="right|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buy_bind_new_phone_lab" android:drawableRight="@drawable/ic_arrow_right" android:drawablePadding="3.0dip" style="@style/pay_value" />
+    </LinearLayout>
+    <TextView android:id="@id/no_verify_mode_phone_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buy_no_verify_phone_title" style="@style/pay_title" />
+    <com.meituan.android.widget.EditTextWithClearButton android:textSize="@dimen/text_size_h6" android:textColor="#ff000000" android:textColorHint="@color/black3" android:id="@id/no_verify_mode_phone" android:background="@drawable/bg_global_card_style" android:paddingLeft="10.0dip" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/please_input_phone_num" android:singleLine="true" android:inputType="phone" />
+</LinearLayout>

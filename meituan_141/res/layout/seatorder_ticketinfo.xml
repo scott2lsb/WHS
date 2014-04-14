@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:background="@drawable/bg_global_card_style" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <TextView android:id="@id/cinema_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" style="@style/pay_lab" />
+        <TextView android:id="@id/movie_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" style="@style/pay_lab" />
+        <TextView android:id="@id/show" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" style="@style/pay_lab" />
+        <TextView android:id="@id/seats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" style="@style/pay_lab" />
+    </com.actionbarsherlock.internal.widget.IcsLinearLayout>
+</LinearLayout>

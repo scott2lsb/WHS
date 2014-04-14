@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_tips_yellow" android:layout_width="fill_parent" android:layout_height="41.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="@color/black1" android:gravity="center" android:id="@id/count_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_order_pay_remaining_time" android:drawablePadding="7.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" layout="@layout/seatorder_ticketinfo" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/seatorder_orderinfo" />
+            <TextView android:gravity="center_vertical" android:id="@id/phone_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/buy_bind_phone_lab" style="@style/pay_title" />
+            <com.meituan.android.widget.EditTextWithClearButton android:textSize="@dimen/text_size_h6" android:textColor="#ff000000" android:textColorHint="@color/black3" android:id="@id/no_verify_mode_phone" android:paddingLeft="10.0dip" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/please_input_phone_num" android:singleLine="true" android:inputType="phone" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/change_phone_layout" android:background="@drawable/bg_single_white_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/phone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/pay_lab" />
+                <TextView android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/buy_bind_new_phone_lab" android:drawableRight="@drawable/ic_arrow_right" android:drawablePadding="5.0dip" android:layout_weight="1.0" style="@style/pay_value" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_seat_payment" />
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:textColor="@color/text_color_selector" android:id="@id/refund_anytime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="3.0dip" />
+                <TextView android:textColor="@color/text_color_selector" android:id="@id/refund_expire" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:drawablePadding="3.0dip" />
+            </LinearLayout>
+            <Button android:textSize="15.0sp" android:textColor="@*android:color/white" android:gravity="center" android:id="@id/pay" android:background="@drawable/bg_cornered_orange" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layout_marginTop="10.0dip" android:text="@string/payorder_buy_now" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

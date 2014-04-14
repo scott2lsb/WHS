@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.actionbarsherlock.internal.widget.IcsLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/green_horizontal_separator" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include android:id="@id/center_progress" layout="@layout/center_progress" />
+        <include android:id="@id/error" layout="@layout/error" />
+        <WebView android:id="@id/webview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/buy_bar" android:layout_width="fill_parent" android:layout_height="55.0dip">
+        <include layout="@layout/deal_buy_bar" />
+    </FrameLayout>
+</com.actionbarsherlock.internal.widget.IcsLinearLayout>

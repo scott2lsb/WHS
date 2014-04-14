@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.yl.whs.SquareRelativeLayout
+            android:id="@+id/header_item_rl_00"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <com.yl.whs.util.SquareImageView
+                android:id="@+id/header_item_iv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/header_item_tv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_item_iv_00"
+                android:layout_centerHorizontal="true"/>
+
+        </com.yl.whs.SquareRelativeLayout>
+
+        <com.yl.whs.SquareRelativeLayout
+            android:id="@+id/header_item_rl_00"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <com.yl.whs.util.SquareImageView
+                android:id="@+id/header_item_iv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/header_item_tv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_item_iv_00"
+                android:layout_centerHorizontal="true"/>
+
+        </com.yl.whs.SquareRelativeLayout>
+
+        <com.yl.whs.SquareRelativeLayout
+            android:id="@+id/header_item_rl_00"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <com.yl.whs.util.SquareImageView
+                android:id="@+id/header_item_iv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/header_item_tv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_item_iv_00"
+                android:layout_centerHorizontal="true"/>
+
+        </com.yl.whs.SquareRelativeLayout>
+
+        <com.yl.whs.SquareRelativeLayout
+            android:id="@+id/header_item_rl_00"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <com.yl.whs.util.SquareImageView
+                android:id="@+id/header_item_iv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/header_item_tv_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_item_iv_00"
+                android:layout_centerHorizontal="true"/>
+
+        </com.yl.whs.SquareRelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</LinearLayout>

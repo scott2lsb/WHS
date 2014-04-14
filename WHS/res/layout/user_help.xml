@@ -35,7 +35,7 @@
         android:layout_width="fill_parent"
         android:layout_height="35dp"
         android:layout_below="@id/userhelp_relativelayout_first"
-        android:background="@drawable/shoplist_chose_bg" >
+        android:background="@drawable/shop_list_choose_bg" >
 
         <TextView
             android:layout_width="fill_parent"

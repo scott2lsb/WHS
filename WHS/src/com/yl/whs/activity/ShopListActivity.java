@@ -618,7 +618,7 @@ public class ShopListActivity extends Activity implements OnScrollListener,
 
 	/****
 	 * @author GMY
-	 * @param type1
+	 * @param type
 	 *            ,是刷新列表，如果查到数据清除列表数据；2是更多数据，不清除数据添加；3重新查询，清除列表数据
 	 */
 	public void resetPM(int type) {

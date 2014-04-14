@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
 
     private static final String TAG_HOME_FRAGMENT = "home_fragment";
     private static final String TAG_PROFILE_FRAGMENT = "profile_fragment";
-    private static final String TAG_LOCATION_FRAGMENT = "location_fragment";
+    private static final String TAG_SHOP_LIST_FRAGMENT = "shop_list_fragment";
     private static final String TAG_MORE_FRAGMENT = "more_fragment";
 
     private static final String KEY_CURR_SELECTED_TAB_ID = "key_curr_selected_tab_id";
@@ -31,12 +31,12 @@ public class MainActivity extends FragmentActivity {
 
     private Fragment mHomeFragment;
     private Fragment mProfileFragment;
-    private Fragment mLocationFragment;
+    private Fragment mShopListFragment;
     private Fragment mMoreFragment;
 
     private View mHomeTab;
     private View mProfileTab;
-    private View mLocationTab;
+    private View mShopTab;
     private View mMoreTab;
 
     private long mBackPressedTime = -1;
@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity {
     private void initUI() {
         mHomeTab = findViewById(R.id.home_layout);
         mProfileTab = findViewById(R.id.profile_layout);
-        mLocationTab = findViewById(R.id.location_layout);
+        mShopTab = findViewById(R.id.shop_list_layout);
         mMoreTab = findViewById(R.id.more_layout);
 
         View.OnClickListener tabClickListener = new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class MainActivity extends FragmentActivity {
 
         mHomeTab.setOnClickListener(tabClickListener);
         mProfileTab.setOnClickListener(tabClickListener);
-        mLocationTab.setOnClickListener(tabClickListener);
+        mShopTab.setOnClickListener(tabClickListener);
         mMoreTab.setOnClickListener(tabClickListener);
     }
 
@@ -85,7 +85,7 @@ public class MainActivity extends FragmentActivity {
 
         mHomeFragment = mFragmentManager.findFragmentByTag(TAG_HOME_FRAGMENT);
         mProfileFragment = mFragmentManager.findFragmentByTag(TAG_PROFILE_FRAGMENT);
-        mLocationFragment = mFragmentManager.findFragmentByTag(TAG_LOCATION_FRAGMENT);
+        mShopListFragment = mFragmentManager.findFragmentByTag(TAG_SHOP_LIST_FRAGMENT);
         mMoreFragment = mFragmentManager.findFragmentByTag(TAG_MORE_FRAGMENT);
 
         FragmentTransaction tans = mFragmentManager.beginTransaction();
@@ -94,7 +94,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.home_layout:
                 mHomeTab.setSelected(true);
                 mProfileTab.setSelected(false);
-                mLocationTab.setSelected(false);
+                mShopTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
                 if (mHomeFragment == null) {
@@ -105,8 +105,8 @@ public class MainActivity extends FragmentActivity {
                 if (mProfileFragment != null) {
                     tans.hide(mProfileFragment);
                 }
-                if (mLocationFragment != null) {
-                    tans.hide(mLocationFragment);
+                if (mShopListFragment != null) {
+                    tans.hide(mShopListFragment);
                 }
                 if (mMoreFragment != null) {
                     tans.hide(mMoreFragment);
@@ -116,7 +116,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.profile_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(true);
-                mLocationTab.setSelected(false);
+                mShopTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
                 if (mProfileFragment == null) {
@@ -127,25 +127,25 @@ public class MainActivity extends FragmentActivity {
                 if (mHomeFragment != null) {
                     tans.hide(mHomeFragment);
                 }
-                if (mLocationFragment != null) {
-                    tans.hide(mLocationFragment);
+                if (mShopListFragment != null) {
+                    tans.hide(mShopListFragment);
                 }
                 if (mMoreFragment != null) {
                     tans.hide(mMoreFragment);
                 }
                 break;
 
-            case R.id.location_layout:
+            case R.id.shop_list_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(false);
-                mLocationTab.setSelected(true);
+                mShopTab.setSelected(true);
                 mMoreTab.setSelected(false);
 
-                if (mLocationFragment == null) {
-                    mLocationFragment = new ShopListFragment();
-                    tans.add(R.id.container, mLocationFragment, TAG_LOCATION_FRAGMENT);
+                if (mShopListFragment == null) {
+                    mShopListFragment = new ShopListFragment();
+                    tans.add(R.id.container, mShopListFragment, TAG_SHOP_LIST_FRAGMENT);
                 }
-                tans.show(mLocationFragment);
+                tans.show(mShopListFragment);
                 if (mHomeFragment != null) {
                     tans.hide(mHomeFragment);
                 }
@@ -160,7 +160,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.more_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(false);
-                mLocationTab.setSelected(false);
+                mShopTab.setSelected(false);
                 mMoreTab.setSelected(true);
 
                 if (mMoreFragment == null) {
@@ -174,8 +174,8 @@ public class MainActivity extends FragmentActivity {
                 if (mProfileFragment != null) {
                     tans.hide(mProfileFragment);
                 }
-                if (mLocationFragment != null) {
-                    tans.hide(mLocationFragment);
+                if (mShopListFragment != null) {
+                    tans.hide(mShopListFragment);
                 }
                 break;
 

@@ -54,7 +54,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="60dp"
                     android:layout_alignParentTop="true"
-                    android:background="@drawable/shoplist_chose_bg"
+                    android:background="@drawable/shop_list_choose_bg"
                     android:gravity="right|center_vertical"
                     android:orientation="horizontal" >
 

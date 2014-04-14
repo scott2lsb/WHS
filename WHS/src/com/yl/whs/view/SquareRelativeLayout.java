@@ -1,4 +1,4 @@
-package com.yl.whs;
+package com.yl.whs.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -24,13 +24,8 @@ public class SquareRelativeLayout extends RelativeLayout {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-        setMeasuredDimension(getDefaultSize(0, widthMeasureSpec),getDefaultSize(0, heightMeasureSpec));
-        int childWidthSize = getMeasuredWidth();
-        int childHeightSize = getMeasuredHeight();
-        //高度和宽度一样
-        heightMeasureSpec = widthMeasureSpec = MeasureSpec.makeMeasureSpec(childWidthSize,MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int size = getMeasuredWidth();
+        setMeasuredDimension(size, size);
     }
 }

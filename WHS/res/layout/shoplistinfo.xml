@@ -63,7 +63,7 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_below="@id/shoplist_layout_index_top_city"
-        android:background="@drawable/shoplist_chose_bg"
+        android:background="@drawable/shop_list_choose_bg"
         android:orientation="horizontal" >
 
         <FrameLayout

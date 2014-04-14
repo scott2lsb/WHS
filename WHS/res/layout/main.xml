@@ -37,6 +37,32 @@
         </FrameLayout>
 
         <FrameLayout
+                android:id="@+id/shop_list_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="#00ff0000">
+
+            <ImageView
+                    android:id="@+id/shop_list_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:duplicateParentState="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tab_location"/>
+
+            <TextView
+                    android:id="@+id/shop_list_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:duplicateParentState="true"
+                    android:text="@string/main_tab_location"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="14sp"/>
+        </FrameLayout>
+
+        <FrameLayout
                 android:id="@+id/profile_layout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -57,32 +83,6 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:duplicateParentState="true"
                     android:text="@string/main_tab_my"
-                    android:textColor="@color/tab_text_color"
-                    android:textSize="14sp"/>
-        </FrameLayout>
-
-        <FrameLayout
-                android:id="@+id/location_layout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.0"
-                android:background="#00ff0000">
-
-            <ImageView
-                    android:id="@+id/location_iv"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:duplicateParentState="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/tab_location"/>
-
-            <TextView
-                    android:id="@+id/location_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:duplicateParentState="true"
-                    android:text="@string/main_tab_location"
                     android:textColor="@color/tab_text_color"
                     android:textSize="14sp"/>
         </FrameLayout>

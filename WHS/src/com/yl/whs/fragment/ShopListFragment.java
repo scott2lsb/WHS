@@ -18,4 +18,6 @@ public class ShopListFragment extends Fragment {
         return rootView;
     }
 
+
+
 }

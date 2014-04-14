@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/shoplist_textview_kind_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/kind_drawable"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/shoplist_imageview_kind_item"
+        android:layout_width="5dp"
+        android:layout_height="40dp"
+        android:background="@drawable/kind_item"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+</FrameLayout>

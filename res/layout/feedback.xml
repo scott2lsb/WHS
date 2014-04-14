@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/feedback_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/feedback_edittext_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_bg_normal"
+                android:gravity="top"
+                android:hint="@string/feedback_edittext_hint"
+                android:maxLength="500"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/feedback_edittext_phone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_bg_normal"
+                android:hint="@string/feedback_phone_hint"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="5dp" />
+
+            <Button
+                android:id="@+id/feedback_btn_submmit"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_btn_selector"
+                android:text="@string/feedback_head_submitbutton"
+                android:textColor="@drawable/login_text_selector"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

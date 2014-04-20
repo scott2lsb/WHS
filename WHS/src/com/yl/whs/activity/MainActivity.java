@@ -2,7 +2,6 @@ package com.yl.whs.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
@@ -15,7 +14,7 @@ import com.yl.whs.fragment.MoreFragment;
 import com.yl.whs.fragment.ProfileFragment;
 import com.yl.whs.fragment.ShopListFragment;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -36,7 +35,7 @@ public class MainActivity extends FragmentActivity {
 
     private View mHomeTab;
     private View mProfileTab;
-    private View mShopTab;
+    private View mShopListTab;
     private View mMoreTab;
 
     private long mBackPressedTime = -1;
@@ -58,7 +57,7 @@ public class MainActivity extends FragmentActivity {
     private void initUI() {
         mHomeTab = findViewById(R.id.home_layout);
         mProfileTab = findViewById(R.id.profile_layout);
-        mShopTab = findViewById(R.id.shop_list_layout);
+        mShopListTab = findViewById(R.id.shop_list_layout);
         mMoreTab = findViewById(R.id.more_layout);
 
         View.OnClickListener tabClickListener = new View.OnClickListener() {
@@ -72,7 +71,7 @@ public class MainActivity extends FragmentActivity {
 
         mHomeTab.setOnClickListener(tabClickListener);
         mProfileTab.setOnClickListener(tabClickListener);
-        mShopTab.setOnClickListener(tabClickListener);
+        mShopListTab.setOnClickListener(tabClickListener);
         mMoreTab.setOnClickListener(tabClickListener);
     }
 
@@ -94,7 +93,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.home_layout:
                 mHomeTab.setSelected(true);
                 mProfileTab.setSelected(false);
-                mShopTab.setSelected(false);
+                mShopListTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
                 if (mHomeFragment == null) {
@@ -116,7 +115,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.profile_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(true);
-                mShopTab.setSelected(false);
+                mShopListTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
                 if (mProfileFragment == null) {
@@ -138,7 +137,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.shop_list_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(false);
-                mShopTab.setSelected(true);
+                mShopListTab.setSelected(true);
                 mMoreTab.setSelected(false);
 
                 if (mShopListFragment == null) {
@@ -160,7 +159,7 @@ public class MainActivity extends FragmentActivity {
             case R.id.more_layout:
                 mHomeTab.setSelected(false);
                 mProfileTab.setSelected(false);
-                mShopTab.setSelected(false);
+                mShopListTab.setSelected(false);
                 mMoreTab.setSelected(true);
 
                 if (mMoreFragment == null) {

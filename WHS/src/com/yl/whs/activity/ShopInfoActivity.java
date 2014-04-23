@@ -132,7 +132,7 @@ public class ShopInfoActivity extends Activity {
 				// 地图定位
 				intent.putExtra("city", "绥化市");
 				intent.putExtra("address", shop.getAddress());
-				intent.setClass(ShopInfoActivity.this, LocationOverlay.class);
+//				intent.setClass(ShopInfoActivity.this, LocationOverlay.class);
 				startActivity(intent);
 			} else if (arg2 == 2) {
 				if (shop.getPhone() != null

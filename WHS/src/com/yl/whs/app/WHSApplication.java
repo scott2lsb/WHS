@@ -6,7 +6,6 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.yl.whs.BuildConfig;
-import com.yl.whs.map.BMapApiDemoApp;
 
 /**
  * Created by zhangdi on 14-4-14.

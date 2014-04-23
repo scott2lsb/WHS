@@ -49,7 +49,6 @@ import android.widget.Toast;
 import com.yl.whs.R;
 import com.yl.whs.activity.LoginActivity;
 import com.yl.whs.dao.MobileDao;
-import com.yl.whs.service.LocationService;
 
 /**
  * 公共方法管理类
@@ -121,20 +120,20 @@ public class UtilManager {
 	 * @author GMY
 	 */
 	public static void startLocationService(Context context) {
-		Intent startLoginService = new Intent(context, LocationService.class);
-		if (!isServiceRunning("com.yl.whs.service.LocationService", context)) {
-
-			context.startService(startLoginService);
-
-		} else {
-			/***
-			 * 如果已经启动服务，则重新启动服务
-			 * 
-			 * @author GMY
-			 */
-			// context.stopService(startLoginService);
-			// context.startService(startLoginService);
-		}
+//		Intent startLoginService = new Intent(context, LocationService.class);
+//		if (!isServiceRunning("com.yl.whs.service.LocationService", context)) {
+//
+//			context.startService(startLoginService);
+//
+//		} else {
+//			/***
+//			 * 如果已经启动服务，则重新启动服务
+//			 *
+//			 * @author GMY
+//			 */
+//			// context.stopService(startLoginService);
+//			// context.startService(startLoginService);
+//		}
 
 	}
 

@@ -19,20 +19,16 @@ import android.widget.TextView;
 
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.weibo.sdk.android.Weibo;
 import com.yl.whs.R;
 import com.yl.whs.model.Coupon;
 import com.yl.whs.thread.AddScoreThread;
 import com.yl.whs.thread.QueryCouponByIdThread;
 import com.yl.whs.thread.UserCollectThread;
-import com.yl.whs.util.AlertDialogManager;
-import com.yl.whs.util.AuthDialogListener;
 import com.yl.whs.util.AutoText;
 import com.yl.whs.util.BackGroundPopUpWindow;
 import com.yl.whs.util.ConstantSOfSinaAndWeChat;
 import com.yl.whs.util.ImageLoader;
 import com.yl.whs.util.SharePopupWindow;
-import com.yl.whs.util.ShareToWSUtil;
 import com.yl.whs.util.StaticConst;
 import com.yl.whs.util.ToastManager;
 import com.yl.whs.util.UtilManager;
@@ -68,13 +64,13 @@ public class CouponInfoActivity extends Activity {
 	// 展示微信/微信朋友圈/新浪微博图标的popupwindow
 	private SharePopupWindow shareWindow;
 	// 提醒是否分享的对话框
-	private AlertDialogManager dialogManager;
-	// 分享所用到的工具类
-	private ShareToWSUtil shareToWSUtil;
+//	private AlertDialogManager dialogManager;
+//	// 分享所用到的工具类
+//	private ShareToWSUtil shareToWSUtil;
 	// 微信API
 	private IWXAPI wxApi;
-	// 新浪微博API
-	private Weibo sinaWeibo;
+//	// 新浪微博API
+//	private Weibo sinaWeibo;
 	// 整个布局
 	private View totalView;
 	private BackGroundPopUpWindow backWindow;
@@ -123,14 +119,14 @@ public class CouponInfoActivity extends Activity {
 				break;
 			// 新浪未授权
 			case StaticConst.SINA_NOT_AUTHORIZATION:
-				sinaWeibo.anthorize(CouponInfoActivity.this,
-						new AuthDialogListener(CouponInfoActivity.this, this));
+//				sinaWeibo.anthorize(CouponInfoActivity.this,
+//						new AuthDialogListener(CouponInfoActivity.this, this));
 				break;
 			// 新浪微博授权成功
 			case StaticConst.SINA_AUTHORIZATION_SUCCESS:
 				Bitmap bmap = BitmapFactory.decodeResource(getResources(),
 						R.drawable.ic_launcher);
-				shareToWSUtil.shareToSina(sharecoupon_info, bmap);
+//				shareToWSUtil.shareToSina(sharecoupon_info, bmap);
 				break;
 			// 分享失败
 			case StaticConst.SHARE_FAIL:
@@ -246,9 +242,9 @@ public class CouponInfoActivity extends Activity {
 		wxApi = WXAPIFactory.createWXAPI(this,
 				ConstantSOfSinaAndWeChat.WECHAT_APP_ID, false);
 		wxApi.registerApp(ConstantSOfSinaAndWeChat.WECHAT_APP_ID);
-		sinaWeibo = Weibo.getInstance(ConstantSOfSinaAndWeChat.SINA_APP_KEY,
-				ConstantSOfSinaAndWeChat.SINA_REDIRECT_URL,
-				ConstantSOfSinaAndWeChat.SINA_SCOPE);
+//		sinaWeibo = Weibo.getInstance(ConstantSOfSinaAndWeChat.SINA_APP_KEY,
+//				ConstantSOfSinaAndWeChat.SINA_REDIRECT_URL,
+//				ConstantSOfSinaAndWeChat.SINA_SCOPE);
 		initView();
 	}
 
@@ -305,7 +301,7 @@ public class CouponInfoActivity extends Activity {
 				+ couponName)
 				+ sharecoupon_url;
 		// 设定分享的文字
-		dialogManager.setContent(sharecoupon_info);
+//		dialogManager.setContent(sharecoupon_info);
 	}
 
 	private int getcouponid() {
@@ -358,14 +354,14 @@ public class CouponInfoActivity extends Activity {
 	// HM 初始化分享的popupwindow以及收藏的popupwindow
 	public void initShareAndBackWindow() {
 		shareWindow = new SharePopupWindow(this, popclickListener);
-		shareToWSUtil = new ShareToWSUtil(this, sinaWeibo, wxApi, handler);
+//		shareToWSUtil = new ShareToWSUtil(this, sinaWeibo, wxApi, handler);
 		// 这里的url content bmp都要更换
 		sharecoupon_url = getString(R.string.sharecoupon_url) + couponid;
 		sharecoupon_info = getString(R.string.sharecoupon_info);
 		Bitmap bmap = BitmapFactory.decodeResource(getResources(),
 				R.drawable.ic_launcher);
-		dialogManager = new AlertDialogManager(this, shareToWSUtil,
-				sharecoupon_url, "", bmap);
+//		dialogManager = new AlertDialogManager(this, shareToWSUtil,
+//				sharecoupon_url, "", bmap);
 		totalView = CouponInfoActivity.this.findViewById(R.id.couponinfo);
 		backWindow = new BackGroundPopUpWindow(this);
 	}
@@ -378,17 +374,17 @@ public class CouponInfoActivity extends Activity {
 			// 分享至新浪
 			case R.id.more_imgbtn_shareToWeChat:
 				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本优惠券分享至微信吗？", 1);
+//				dialogManager.alertDialog("确定将本优惠券分享至微信吗？", 1);
 				break;
 			// 分享至微朋友圈
 			case R.id.more_imgbtn_shareToWeChatFriend:
 				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本优惠券分享至微信朋友圈吗？", 2);
+//				dialogManager.alertDialog("确定将本优惠券分享至微信朋友圈吗？", 2);
 				break;
 			// 分享至新浪
 			case R.id.more_imgbtn_shareToSina:
 				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本优惠券分享至新浪微博吗？", 3);
+//				dialogManager.alertDialog("确定将本优惠券分享至新浪微博吗？", 3);
 				break;
 			default:
 				break;

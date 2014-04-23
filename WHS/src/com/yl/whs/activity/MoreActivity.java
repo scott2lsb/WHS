@@ -20,17 +20,15 @@ import android.widget.ImageButton;
 
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.weibo.sdk.android.Weibo;
 import com.yl.whs.R;
 import com.yl.whs.model.VersionInfo;
 import com.yl.whs.thread.CheckVersionThread;
 import com.yl.whs.thread.DownAppThread;
-import com.yl.whs.util.AlertDialogManager;
-import com.yl.whs.util.AuthDialogListener;
+//import com.yl.whs.util.AlertDialogManager;
+//import com.yl.whs.util.AuthDialogListener;
 import com.yl.whs.util.ConstantSOfSinaAndWeChat;
 import com.yl.whs.util.DialogUtil;
 import com.yl.whs.util.SharePopupWindow;
-import com.yl.whs.util.ShareToWSUtil;
 import com.yl.whs.util.StaticConst;
 import com.yl.whs.util.ToastManager;
 import com.yl.whs.util.UtilManager;
@@ -64,11 +62,11 @@ public class MoreActivity extends Activity {
 	// 微信API
 	private IWXAPI wxApi;
 	// 新浪微博API
-	private Weibo sinaWeibo;
+//	private Weibo sinaWeibo;
 	// 用于展示微信/微信朋友圈/新浪微博 图标
 	private SharePopupWindow shareWindow;
-	private AlertDialogManager dialogManager;
-	private ShareToWSUtil shareToWSUtil;
+//	private AlertDialogManager dialogManager;
+//	private ShareToWSUtil shareToWSUtil;
 	private ImageButton mayLikeBtn_1;
 	private ImageButton mayLikeBtn_2;
 	private String[] mayLikeUrls;
@@ -87,17 +85,17 @@ public class MoreActivity extends Activity {
 				ToastManager.showToast(MoreActivity.this, "已经分享至新浪", 2000);
 				break;
 			// 新浪未授权
-			case StaticConst.SINA_NOT_AUTHORIZATION:
-				sinaWeibo.anthorize(MoreActivity.this, new AuthDialogListener(
-						MoreActivity.this, this));
-				break;
+//			case StaticConst.SINA_NOT_AUTHORIZATION:
+//				sinaWeibo.anthorize(MoreActivity.this, new AuthDialogListener(
+//						MoreActivity.this, this));
+//				break;
 			// 新浪微博授权成功
-			case StaticConst.SINA_AUTHORIZATION_SUCCESS:
-				Bitmap bmap = BitmapFactory.decodeResource(getResources(),
-						R.drawable.ic_launcher);
-				final String content = getString(R.string.shareself_info);
-				shareToWSUtil.shareToSina(content, bmap);
-				break;
+//			case StaticConst.SINA_AUTHORIZATION_SUCCESS:
+//				Bitmap bmap = BitmapFactory.decodeResource(getResources(),
+//						R.drawable.ic_launcher);
+//				final String content = getString(R.string.shareself_info);
+//				shareToWSUtil.shareToSina(content, bmap);
+//				break;
 			// 分享失败
 			case StaticConst.SHARE_FAIL:
 				ToastManager.showToast(MoreActivity.this, "分享失败，请检查网络是否通畅",
@@ -265,9 +263,9 @@ public class MoreActivity extends Activity {
 		wxApi = WXAPIFactory.createWXAPI(this,
 				ConstantSOfSinaAndWeChat.WECHAT_APP_ID, false);
 		wxApi.registerApp(ConstantSOfSinaAndWeChat.WECHAT_APP_ID);
-		sinaWeibo = Weibo.getInstance(ConstantSOfSinaAndWeChat.SINA_APP_KEY,
-				ConstantSOfSinaAndWeChat.SINA_REDIRECT_URL,
-				ConstantSOfSinaAndWeChat.SINA_SCOPE);
+//		sinaWeibo = Weibo.getInstance(ConstantSOfSinaAndWeChat.SINA_APP_KEY,
+//				ConstantSOfSinaAndWeChat.SINA_REDIRECT_URL,
+//				ConstantSOfSinaAndWeChat.SINA_SCOPE);
 		initView();
 	}
 
@@ -290,13 +288,13 @@ public class MoreActivity extends Activity {
 	}
 
 	private void initView() {
-		shareToWSUtil = new ShareToWSUtil(this, sinaWeibo, wxApi, handler);
+//		shareToWSUtil = new ShareToWSUtil(this, sinaWeibo, wxApi, handler);
 		String url = getString(R.string.download_url);
 		String content = getString(R.string.shareself_info);
 		Bitmap bmap = BitmapFactory.decodeResource(getResources(),
 				R.drawable.ic_launcher);
-		dialogManager = new AlertDialogManager(this, shareToWSUtil, url,
-				content, bmap);
+//		dialogManager = new AlertDialogManager(this, shareToWSUtil, url,
+//				content, bmap);
 		shareWindow = new SharePopupWindow(this, popclickListener);
 		// more_linearlayout_maybeyoulike = this
 		// .findViewById(R.id.more_linearlayout_maybeyoulike);
@@ -398,13 +396,13 @@ public class MoreActivity extends Activity {
 				}
 				break;
 			// 分享至微信
-			case R.id.more_linearlayout_shareToWeChat:
-				dialogManager.alertDialog("确定将本应用分享至微信吗？", 1);
-				break;
-			// 分享至新浪微博
-			case R.id.more_linearlayout_shareToSina:
-				dialogManager.alertDialog("确定将本应用分享至新浪微博吗？", 3);
-				break;
+//			case R.id.more_linearlayout_shareToWeChat:
+//				dialogManager.alertDialog("确定将本应用分享至微信吗？", 1);
+//				break;
+//			// 分享至新浪微博
+//			case R.id.more_linearlayout_shareToSina:
+//				dialogManager.alertDialog("确定将本应用分享至新浪微博吗？", 3);
+//				break;
 			// 可能还喜欢
 			// case R.id.more_linearlayout_maybeyoulike:
 			// UtilManager.openNetUrl(MoreActivity.this,
@@ -446,20 +444,20 @@ public class MoreActivity extends Activity {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			// 分享至新浪
-			case R.id.more_imgbtn_shareToWeChat:
-				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本应用分享至微信吗？", 1);
-				break;
-			// 分享至微朋友圈
-			case R.id.more_imgbtn_shareToWeChatFriend:
-				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本应用分享至微信朋友圈吗？", 2);
-				break;
-			// 分享至新浪
-			case R.id.more_imgbtn_shareToSina:
-				shareWindow.dismiss();
-				dialogManager.alertDialog("确定将本应用分享至新浪微博吗？", 3);
-				break;
+//			case R.id.more_imgbtn_shareToWeChat:
+//				shareWindow.dismiss();
+//				dialogManager.alertDialog("确定将本应用分享至微信吗？", 1);
+//				break;
+//			// 分享至微朋友圈
+//			case R.id.more_imgbtn_shareToWeChatFriend:
+//				shareWindow.dismiss();
+//				dialogManager.alertDialog("确定将本应用分享至微信朋友圈吗？", 2);
+//				break;
+//			// 分享至新浪
+//			case R.id.more_imgbtn_shareToSina:
+//				shareWindow.dismiss();
+//				dialogManager.alertDialog("确定将本应用分享至新浪微博吗？", 3);
+//				break;
 			default:
 				break;
 			}

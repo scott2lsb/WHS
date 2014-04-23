@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,7 +20,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.sina.weibo.sdk.log.Log;
 import com.yl.whs.R;
 import com.yl.whs.adapter.KeywordAdapter;
 import com.yl.whs.dao.MobileDao;

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#ffeaeaea"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+    <Button
+            android:id="@+id/category"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:background="@drawable/btn_toolbar_selector"
+            android:textSize="13.0sp"
+            android:textColor="#ff666666"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_dropdown_arrow"
+            android:drawablePadding="2.0dip"/>
+
+    <View android:layout_gravity="center"
+          android:background="#ffe4e4e4"
+          android:layout_width="1.0dip"
+          android:layout_height="28.0dip"/>
+
+    <Button
+            android:id="@+id/area"
+            android:textSize="13.0sp"
+            android:textColor="#ff666666"
+            android:gravity="left|center"
+            android:background="@drawable/btn_toolbar_selector"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_dropdown_arrow"
+            android:drawablePadding="2.0dip"
+            android:layout_weight="1.0"/>
+
+    <View android:layout_gravity="center"
+          android:background="#ffe4e4e4"
+          android:layout_width="1.0dip"
+          android:layout_height="28.0dip"/>
+
+    <Button
+            android:id="@+id/sort"
+            android:textSize="13.0sp"
+            android:textColor="#ff666666"
+            android:gravity="left|center"
+            android:background="@drawable/btn_toolbar_selector"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            android:drawableRight="@drawable/ic_dropdown_arrow"
+            android:drawablePadding="2.0dip"
+            android:layout_weight="1.0"/>
+</LinearLayout>

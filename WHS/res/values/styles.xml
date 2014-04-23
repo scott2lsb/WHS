@@ -2,7 +2,22 @@
 <resources>
 
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarItemBackground">@drawable/actionbar_item_bg</item>
+    </style>
 
+    <style name="AppNoTitleBar" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="titleTextStyle">@style/TitleTextStyle</item>
+        <item name="displayOptions">showHome|homeAsUp|showTitle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="Theme.Dianping" parent="@android:style/Theme.Light">
@@ -26,9 +41,14 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
 
-    <style name="PopupAnimation" parent="android:Animation">
+    <style name="PopupBottomAnimation" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="PopupTopAnimation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out</item>
     </style>
 
 </resources>

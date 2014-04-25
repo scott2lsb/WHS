@@ -3,7 +3,7 @@ package com.yl.whs.activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.Toast;
 import com.sina.weibo.sdk.api.WebpageObject;
 import com.sina.weibo.sdk.api.WeiboMessage;
@@ -15,13 +15,14 @@ import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.constant.WBConstants;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.utils.Utility;
+import com.yl.whs.R;
 import com.yl.whs.share.AccessTokenKeeper;
 import com.yl.whs.share.Constants;
 
 /**
  * Created by zhangdi on 14-4-20.
  */
-public class BaseActivity extends FragmentActivity implements IWeiboHandler.Response {
+public class BaseActivity extends ActionBarActivity implements IWeiboHandler.Response {
 
     private WeiboAuth mWeiboAuth;
     private Oauth2AccessToken mAccessToken;
@@ -31,6 +32,9 @@ public class BaseActivity extends FragmentActivity implements IWeiboHandler.Resp
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().setBackgroundDrawableResource(R.color.background_color);
+
         if (supportWBShare()) {
             mWeiboAuth = new WeiboAuth(this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
 

@@ -6,7 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yl.whs.R;
+import com.yl.whs.adapter.ShopListAdapter;
 
 /**
  * Created by zhangdi on 14-4-7.
@@ -18,6 +21,19 @@ public class ShopListFragment extends Fragment implements View.OnClickListener {
     private Button mSortBtn;
 
     private CategoryPopupWindow mCategoryPopupWindow;
+
+    private View mLocateHeaderView;
+
+    private PullToRefreshListView mPullToRefreshListView;
+    private ShopListAdapter mShopListAdapter;
+
+    private ImageLoader mImageLoader;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mImageLoader = ImageLoader.getInstance();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,6 +60,13 @@ public class ShopListFragment extends Fragment implements View.OnClickListener {
         mCategoryBtn.setOnClickListener(this);
         mAreaBtn.setOnClickListener(this);
         mSortBtn.setOnClickListener(this);
+
+        mLocateHeaderView = LayoutInflater.from(getActivity()).inflate(R.layout.list_header_locate, null);
+
+        mPullToRefreshListView = (PullToRefreshListView) rootView.findViewById(R.id.list_view);
+        mPullToRefreshListView.getRefreshableView().addHeaderView(mLocateHeaderView);
+        mShopListAdapter = new ShopListAdapter(getActivity(), mImageLoader);
+        mPullToRefreshListView.setAdapter(mShopListAdapter);
     }
 
 

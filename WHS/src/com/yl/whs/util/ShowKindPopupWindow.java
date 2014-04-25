@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yl.whs.R;
-import com.yl.whs.activity.ShopListActivity;
 import com.yl.whs.adapter.IndustryAdapter;
 import com.yl.whs.adapter.SubIndustryAdapter;
 import com.yl.whs.model.Industry;
@@ -161,9 +160,9 @@ public class ShowKindPopupWindow extends PopupWindow {
 						.getIndustry_name());
 			}
 			dismiss();
-			((ShopListActivity) context).clearKindId(lastClickItemId,
-					subIndustries.get(arg2).getSubindustry_id());
-			((ShopListActivity) context).resetPM(3);
+//			((ShopListActivity) context).clearKindId(lastClickItemId,
+//					subIndustries.get(arg2).getSubindustry_id());
+//			((ShopListActivity) context).resetPM(3);
 		}
 	};
 

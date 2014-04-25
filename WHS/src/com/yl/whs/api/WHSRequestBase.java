@@ -11,9 +11,9 @@ import com.plugin.internet.core.annotations.UseHttps;
 /**
  * Created by zhangdi on 14-4-18.
  */
-public class WHSRequestBase extends RequestBase<ResponseBase> {
+public class WHSRequestBase<ResponseBase> extends RequestBase<ResponseBase> {
 
-    public static final String BASE_URL = "http://api.wohuisheng.net";
+    public static final String BASE_URL = "http://api.wohuisheng.net/";
 
     public static final String SECRET_KEY = "whs_123456";
 
@@ -38,8 +38,9 @@ public class WHSRequestBase extends RequestBase<ResponseBase> {
         }
 
         params.putString("method", method);
-        params.putString("timestamp", String.valueOf(System.currentTimeMillis()));
-        params.putString("key", getSig());
+        long timestamp = System.currentTimeMillis();
+        params.putString("timestamp", String.valueOf(timestamp));
+        params.putString("key", getSig(timestamp));
 
         return params;
     }
@@ -49,8 +50,8 @@ public class WHSRequestBase extends RequestBase<ResponseBase> {
      *
      * @return
      */
-    private String getSig() {
-        String origin = SECRET_KEY + System.currentTimeMillis();
+    private String getSig(long timestamp) {
+        String origin = SECRET_KEY + timestamp;
         return InternetStringUtils.MD5Encode(origin);
     }
 

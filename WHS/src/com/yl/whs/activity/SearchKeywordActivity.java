@@ -167,7 +167,7 @@ public class SearchKeywordActivity extends Activity {
 	// 跳转到ShopListActivity
 	protected void jumpToShoplist(String keyword) {
 		Intent intent = new Intent();
-		intent.setClass(SearchKeywordActivity.this, ShopListActivity.class);
+//		intent.setClass(SearchKeywordActivity.this, ShopListActivity.class);
 		intent.putExtra("keyword", keyword);
 		startActivity(intent);
 		finish();

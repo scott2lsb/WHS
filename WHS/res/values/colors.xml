@@ -350,4 +350,12 @@
     <!-- 黑色 -->
     <color name="selectgrey">#ababab</color>
 
+    <!-- **************新版color从这里开始************** -->
+    <color name="background_color">#ffeeeeee</color>
+
+    <color name="black1">#ff333333</color>
+    <color name="black2">#ff666666</color>
+    <color name="black3">#ff999999</color>
+    <color name="black4">#ffcccccc</color>
+
 </resources>

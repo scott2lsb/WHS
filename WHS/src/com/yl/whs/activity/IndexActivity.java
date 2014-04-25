@@ -385,7 +385,7 @@ public class IndexActivity extends Activity implements OnScrollListener {
 				}
 				// **************进入商铺列表*****************//
 				intent.putExtras(bundle);
-				intent.setClass(IndexActivity.this, ShopListActivity.class);
+//				intent.setClass(IndexActivity.this, ShopListActivity.class);
 				startActivity(intent);
 			}
 		}

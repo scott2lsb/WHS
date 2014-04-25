@@ -2,18 +2,19 @@
 <resources>
 
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/background_color</item>
         <item name="actionBarStyle">@style/ActionBarStyle</item>
         <item name="actionBarItemBackground">@drawable/actionbar_item_bg</item>
-    </style>
-
-    <style name="AppNoTitleBar" parent="@style/AppTheme">
-        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar">
         <item name="background">@drawable/actionbar_bg</item>
         <item name="titleTextStyle">@style/TitleTextStyle</item>
         <item name="displayOptions">showHome|homeAsUp|showTitle</item>
+    </style>
+
+    <style name="AppNoTitleBar" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="TitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">

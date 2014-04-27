@@ -20,4 +20,9 @@ public class GetShopRequest extends WHSRequestBase<GetShopResponse> {
     @RequiredParam("shopType")
     private int shopType;
 
+    public GetShopRequest(int shopId, int shopType) {
+        this.shopId = shopId;
+        this.shopType = shopType;
+    }
+
 }

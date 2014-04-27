@@ -23,4 +23,9 @@ public class NearbyShopRequest extends WHSRequestBase<NearbyShopResponse> {
     @RequiredParam("latitude")
     private long latitude;
 
+    public NearbyShopRequest(int cityid, long longitude, long latitude) {
+        this.cityid = cityid;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
 }

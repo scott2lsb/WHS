@@ -15,7 +15,7 @@ public class Comment {
     public int commentId;
 
     @JsonProperty("commentTime")
-    public String commentTime;
+    public long commentTime;
 
     @JsonProperty("userName")
     public String userName;

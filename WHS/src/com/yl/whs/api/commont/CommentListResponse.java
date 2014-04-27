@@ -6,9 +6,9 @@ import com.plugin.internet.core.json.JsonProperty;
 /**
  * Created by zhangdi on 14-4-26.
  */
-public class PostCommontResponse extends ResponseBase {
+public class CommentListResponse extends ResponseBase {
 
-    @JsonProperty("errcode")
-    public int errcode;
+    @JsonProperty("comment")
+    public Comment[] comments;
 
 }

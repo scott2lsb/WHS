@@ -9,15 +9,15 @@ import com.yl.whs.api.WHSRequestBase;
 /**
  * Created by zhangdi on 14-4-26.
  */
-@RestMethodUrl("commont/getall")
+@RestMethodUrl("comment/getall")
 @NeedTicket
 @HttpMethod("GET")
-public class CommontListRequest extends WHSRequestBase<CommontListResponse> {
+public class CommentListRequest extends WHSRequestBase<CommentListResponse> {
 
     @RequiredParam("shopId")
     private int shopId;
 
-    public CommontListRequest(int shopId) {
+    public CommentListRequest(int shopId) {
         this.shopId = shopId;
     }
 

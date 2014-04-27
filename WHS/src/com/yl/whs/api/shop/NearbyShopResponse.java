@@ -11,12 +11,6 @@ public class NearbyShopResponse extends ResponseBase {
     @JsonProperty("errcode")
     public int errcode;
 
-    @JsonProperty("hasMore")
-    public int hasMore; //hasMore为0时表示没有了，1，表示还有其他的
-
-    @JsonProperty("lastId")
-    public int lastId;
-
     @JsonProperty("shops")
     public Shop[] shops;
     

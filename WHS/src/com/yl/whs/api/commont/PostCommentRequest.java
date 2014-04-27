@@ -10,7 +10,7 @@ import com.yl.whs.api.WHSRequestBase;
  */
 @RestMethodUrl("comment/post")
 @NeedTicket
-public class PostCommontRequest extends WHSRequestBase<PostCommontResponse> {
+public class PostCommentRequest extends WHSRequestBase<PostCommentResponse> {
 
     @RequiredParam("type")
     private int type; //1,代表优惠券，2代表团购
@@ -24,7 +24,7 @@ public class PostCommontRequest extends WHSRequestBase<PostCommontResponse> {
     @RequiredParam("shopId")
     private int shopId; //团购或者优惠店铺的id
 
-    public PostCommontRequest(int type, String comment, int userId, int shopId) {
+    public PostCommentRequest(int type, String comment, int userId, int shopId) {
         this.type = type;
         this.comment = comment;
         this.userId = userId;

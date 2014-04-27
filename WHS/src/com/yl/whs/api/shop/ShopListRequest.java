@@ -32,13 +32,13 @@ public class ShopListRequest extends WHSRequestBase<ShopListResponse> {
     @RequiredParam("sortType")
     private int sortType; //0代表默认的，1代表按照人气（浏览量），2代表时间，3仅显示团购，4仅显示优惠券
 
-    public ShopListRequest(int cityId, int lastId, int areaId, int classId, int subId, int sortType) {
+    public ShopListRequest(int cityId, int areaId, int classId, int subId, int sortType, int lastId) {
         this.cityId = cityId;
-        this.lastId = lastId;
         this.areaId = areaId;
         this.classId = classId;
         this.subId = subId;
         this.sortType = sortType;
+        this.lastId = lastId;
     }
 
 }

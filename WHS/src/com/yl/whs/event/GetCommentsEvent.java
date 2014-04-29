@@ -1,6 +1,6 @@
 package com.yl.whs.event;
 
-import com.yl.whs.api.commont.Comment;
+import com.yl.whs.model.Comment;
 
 /**
  * Created by zhangdi on 14-4-26.

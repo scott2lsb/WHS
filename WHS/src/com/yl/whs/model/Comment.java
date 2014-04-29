@@ -1,4 +1,4 @@
-package com.yl.whs.api.commont;
+package com.yl.whs.model;
 
 import com.plugin.internet.core.json.JsonProperty;
 

@@ -4,7 +4,7 @@
           android:versionCode="18"
           android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="8"/>
+    <uses-sdk android:minSdkVersion="10"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -22,9 +22,9 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
 
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
-    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
     <application
             android:name="com.yl.whs.app.WHSApplication"
@@ -47,6 +47,14 @@
         </activity>
 
         <activity android:name="com.yl.whs.activity.MainActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.yl.whs.activity.LoginActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.yl.whs.activity.RegisterActivity"
                   android:screenOrientation="portrait">
         </activity>
 

@@ -1,6 +1,6 @@
 package com.yl.whs.event;
 
-import com.yl.whs.api.shop.Image;
+import com.yl.whs.model.Image;
 
 /**
  * Created by zhangdi on 14-4-27.

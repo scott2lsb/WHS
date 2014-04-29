@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="20.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginRight="20.0dip">
+            <EditText
+                    android:id="@+id/edit_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_h6"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black3"
+                    android:background="@drawable/bg_edit_selector"
+                    android:paddingLeft="10.0dip"
+                    android:scrollbars="none"
+                    android:hint="@string/login_username"
+                    android:singleLine="true"
+                    android:inputType="textPhonetic"
+                    android:imeOptions="actionNext"/>
+
+            <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_h6"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black3"
+                    android:background="@drawable/bg_edit_selector"
+                    android:paddingLeft="10.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:hint="@string/login_password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+            <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/text_size_h3"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_cornered_green"
+                    android:text="@string/login_signin"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

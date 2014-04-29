@@ -3,11 +3,16 @@
 
     <color name="background_color">#ffeeeeee</color>
 
+    <color name="black">#ff000000</color>
     <color name="black1">#ff333333</color>
     <color name="black2">#ff666666</color>
     <color name="black3">#ff999999</color>
     <color name="black4">#ffcccccc</color>
 
+    <color name="white">#ffffffff</color>
     <color name="red">#ffdb6633</color>
+    <color name="green">#ff32b9aa</color>
+    <color name="light_green">#ffc9eae8</color>
+
 
 </resources>

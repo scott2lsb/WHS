@@ -47,7 +47,7 @@ public class ShopListAdapter extends BaseAdapter {
 
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = mInflater.inflate(R.layout.poi_list_item, null);
+            convertView = mInflater.inflate(R.layout.shop_list_item, null);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

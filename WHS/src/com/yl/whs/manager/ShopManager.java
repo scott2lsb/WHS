@@ -1,6 +1,5 @@
 package com.yl.whs.manager;
 
-import android.content.Context;
 import com.plugin.common.utils.CustomThreadPool;
 import com.plugin.internet.InternetUtils;
 import com.plugin.internet.core.NetWorkException;
@@ -8,15 +7,13 @@ import com.yl.whs.api.shop.*;
 import com.yl.whs.event.*;
 import de.greenrobot.event.EventBus;
 
-import java.util.Arrays;
-
 /**
  * Created by zhangdi on 14-4-26.
  */
 public class ShopManager extends AbsManager {
 
-    protected ShopManager(Context context) {
-        super(context);
+    protected ShopManager() {
+        super();
     }
 
     public void getShopList(final int cityId, final int areaId,

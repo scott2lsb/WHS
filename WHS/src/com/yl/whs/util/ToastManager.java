@@ -1,37 +1,31 @@
 package com.yl.whs.util;
 
 import android.content.Context;
-import android.os.Handler;
 import android.widget.Toast;
 
+/**
+ * Created by zhangdi on 14-4-20.
+ */
 public class ToastManager {
 
-	private static Toast mToast;
-	private static Handler mHandler = new Handler();
-	private static Runnable mRunnable = new Runnable() {
-		public void run() {
-			mToast.cancel();
-		}
-	};
+    private static Toast mToast;
 
-	public static void showToast(Context mContext, String text, int duration) {
-		mHandler.removeCallbacks(mRunnable);
-		if (mToast != null) {
-			mToast.setText(text);
-		} else {
-			mToast = Toast.makeText(mContext, text, Toast.LENGTH_SHORT);
-		}
-		mHandler.postDelayed(mRunnable, duration);
-		mToast.show();
-	}
+    public static void show(Context context, String text) {
+        if (mToast == null) {
+            mToast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+        } else {
+            mToast.setText(text);
+        }
+        mToast.show();
+    }
 
-	public static void showToast(Context mContext, int resId, int duration) {
-		showToast(mContext, mContext.getResources().getString(resId), duration);
-	}
+    public static void show(Context context, int resId) {
+        show(context, context.getResources().getString(resId));
+    }
 
-	public static void cancelToast() {
-		if (mToast != null) {
-			mToast.cancel();
-		}
-	}
+    public static void cancel() {
+        if (mToast != null) {
+            mToast.cancel();
+        }
+    }
 }

@@ -1,6 +1,5 @@
 package com.yl.whs.manager;
 
-import android.content.Context;
 import com.plugin.common.utils.CustomThreadPool;
 import com.plugin.internet.InternetUtils;
 import com.plugin.internet.core.NetWorkException;
@@ -10,16 +9,13 @@ import com.yl.whs.event.NetworkExceptionEvent;
 import com.yl.whs.event.PostCommentEvent;
 import de.greenrobot.event.EventBus;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created by zhangdi on 14-4-26.
  */
 public class CommentManager extends AbsManager {
 
-    public CommentManager(Context context) {
-        super(context);
+    public CommentManager() {
+        super();
     }
 
     public void getAllComments(final int shopId) {

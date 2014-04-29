@@ -15,9 +15,10 @@ import com.yl.whs.fragment.MoreFragment;
 import com.yl.whs.fragment.ProfileFragment;
 import com.yl.whs.fragment.ShopListFragment;
 
+/**
+ * Created by zhangdi on 14-4-21.
+ */
 public class MainActivity extends BaseActivity {
-
-    private static final String TAG = MainActivity.class.getSimpleName();
 
     private static final String TAG_HOME_FRAGMENT = "home_fragment";
     private static final String TAG_PROFILE_FRAGMENT = "profile_fragment";
@@ -119,7 +120,7 @@ public class MainActivity extends BaseActivity {
                     tans.hide(mMoreFragment);
                 }
 
-                getSupportActionBar().setTitle(R.string.title_main);
+                getSupportActionBar().setTitle(R.string.title_home);
                 break;
 
             case R.id.profile_layout:

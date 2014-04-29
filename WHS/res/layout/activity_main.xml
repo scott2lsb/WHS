@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:duplicateParentState="true"
-                    android:text="@string/main_tab_index"
+                    android:text="@string/main_tab_home"
                     android:textColor="@color/tab_text_color"
                     android:textSize="14sp"/>
         </FrameLayout>
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:duplicateParentState="true"
-                    android:text="@string/main_tab_location"
+                    android:text="@string/main_tab_shops"
                     android:textColor="@color/tab_text_color"
                     android:textSize="14sp"/>
         </FrameLayout>
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:duplicateParentState="true"
-                    android:text="@string/main_tab_my"
+                    android:text="@string/main_tab_profile"
                     android:textColor="@color/tab_text_color"
                     android:textSize="14sp"/>
         </FrameLayout>

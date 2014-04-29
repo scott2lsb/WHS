@@ -31,7 +31,7 @@
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
-        <activity android:name="com.yl.whs.activity.LoadingActivity"
+        <activity android:name=".activity.SplashActivity"
                   android:screenOrientation="portrait"
                   android:theme="@style/AppNoTitleBar">
             <intent-filter>
@@ -41,88 +41,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.yl.whs.activity.HelpActivity">
+        <activity android:name=".activity.GuideActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppNoTitleBar">
         </activity>
 
-        <activity android:name="com.yl.whs.activity.MainActivity">
+        <activity android:name="com.yl.whs.activity.MainActivity"
+                  android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name="com.yl.whs.activity.IndexActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.SearchKeywordActivity"/>
-
-        <activity android:name="com.yl.whs.activity.CouponInfoActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.MoreActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.ShopInfoActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.ShopListActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.LoginActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.RegisterActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.MineActivity">
-        </activity>
-
-        <activity android:name="com.yl.whs.activity.SettingActivity">
-        </activity>
-
-        <!-- 店铺列表activity -->
-        <activity android:name="com.yl.whs.activity.ShopRemarkListActivity"/>
-
-        <!-- 地图定位 gmy -->
-        <!--<activity-->
-                <!--android:name="com.yl.whs.activity.LocationOverlay"-->
-                <!--android:launchMode="singleTask"-->
-                <!--android:screenOrientation="portrait"/>-->
-
-        <activity
-                android:name="com.yl.whs.activity.FeedbackActivity"
-                android:label="@string/title_activity_feedback">
-        </activity>
-
-        <activity
-                android:name="com.yl.whs.activity.AboutUsActivity"
-                android:label="@string/title_activity_about_us">
-        </activity>
-
-        <activity
-                android:name="com.yl.whs.activity.UserHelpActivity"
-                android:label="@string/title_activity_user_help">
-        </activity>
-
-        <!-- 店铺相册界面 by gmy -->
-
-        <activity android:name="com.yl.whs.activity.ShopAlbumActivity"/>
-
-        <activity
-                android:name="com.yl.whs.activity.FullPicActivity"
-                android:theme="@android:style/Theme.Translucent"/>
-
-        <activity android:name="com.yl.whs.activity.SubmitRemarkActivity"/>
-
-        <activity android:name="com.yl.whs.activity.UserRemarkActivity"/>
-
-        <activity android:name="com.yl.whs.activity.BusAndHoursActivity"/>
-
-        <activity android:name="com.yl.whs.activity.RemarkInfoActivity"/>
-
-        <activity android:name="com.yl.whs.activity.MyCollectActivity"/>
 
         <!--<service android:name="com.yl.whs.service.LocationService">-->
-            <!--<intent-filter>-->
-                <!--&lt;!&ndash; 为该Service组件的intent-filter配置action &ndash;&gt;-->
-                <!--<action android:name="com.yl.whs.service.LocationService"/>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--&lt;!&ndash; 为该Service组件的intent-filter配置action &ndash;&gt;-->
+        <!--<action android:name="com.yl.whs.service.LocationService"/>-->
+        <!--</intent-filter>-->
         <!--</service>-->
 
         <!-- location service -->
@@ -133,45 +66,45 @@
 
         <!--&lt;!&ndash; push service client &ndash;&gt;-->
         <!--<receiver android:name="com.yl.whs.push.PushMessageReceiver">-->
-            <!--<intent-filter>-->
-                <!--&lt;!&ndash; 接收 push 消息 &ndash;&gt;-->
-                <!--<action android:name="com.baidu.android.pushservice.action.MESSAGE"/>-->
-                <!--&lt;!&ndash; 接收 bind、setTags 等 method 的返回结果 &ndash;&gt;-->
-                <!--<action android:name="com.baidu.android.pushservice.action.RECEIVE"/>-->
-                <!--&lt;!&ndash; 可选。接受通知点击事件,和通知自定义内容 &ndash;&gt;-->
-                <!--<action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--&lt;!&ndash; 接收 push 消息 &ndash;&gt;-->
+        <!--<action android:name="com.baidu.android.pushservice.action.MESSAGE"/>-->
+        <!--&lt;!&ndash; 接收 bind、setTags 等 method 的返回结果 &ndash;&gt;-->
+        <!--<action android:name="com.baidu.android.pushservice.action.RECEIVE"/>-->
+        <!--&lt;!&ndash; 可选。接受通知点击事件,和通知自定义内容 &ndash;&gt;-->
+        <!--<action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
 
         <!--&lt;!&ndash; 用于接收系统消息以保证 PushService 正常运行 &ndash;&gt;-->
         <!--<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"-->
-                  <!--android:process=": bdservice_v1">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED"/>-->
-                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>-->
-                <!--<action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>-->
-                <!--<action android:name="com.baidu.android.pushservice.action.media.CLICK"/>-->
-            <!--</intent-filter>-->
+        <!--android:process=": bdservice_v1">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.BOOT_COMPLETED"/>-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>-->
+        <!--<action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>-->
+        <!--<action android:name="com.baidu.android.pushservice.action.media.CLICK"/>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <!--&lt;!&ndash; Push 服务接收客户端发送的各种请求&ndash;&gt;-->
         <!--<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"-->
-                  <!--android:process=": bdservice_v1">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.baidu.android.pushservice.action.METHOD "/>-->
-                <!--<action android:name="com.baidu.android.pushservice.action.BIND_SYNC "/>-->
-            <!--</intent-filter>-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.PACKAGE_REMOVED"/>-->
-                <!--<data android:scheme="package"/>-->
-            <!--</intent-filter>-->
+        <!--android:process=": bdservice_v1">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.baidu.android.pushservice.action.METHOD "/>-->
+        <!--<action android:name="com.baidu.android.pushservice.action.BIND_SYNC "/>-->
+        <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.PACKAGE_REMOVED"/>-->
+        <!--<data android:scheme="package"/>-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <!--&lt;!&ndash; Push 服务 &ndash;&gt;-->
         <!--<service android:name="com.baidu.android.pushservice.PushService"-->
-                 <!--android:exported="true"-->
-                 <!--android:process=" bdservice_v1"/>-->
+        <!--android:exported="true"-->
+        <!--android:process=" bdservice_v1"/>-->
 
         <!--<meta-data android:name="BAIDU_PUSH_APIKEY"-->
-                   <!--android:value="a3Bb1XeOO1guNB7azLYm4t2F"/>-->
+        <!--android:value="a3Bb1XeOO1guNB7azLYm4t2F"/>-->
 
     </application>
 

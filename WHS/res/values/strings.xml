@@ -20,8 +20,43 @@
 
     <string name="poi_lowest_price_after">起</string>
 
+    <!-- 我的 -->
+    <string name="user_not_login">您还没有登录~</string>
+    <string name="login">登录</string>
+    <string name="point_exchange">积分抵现金</string>
+    <string name="user_point">会员积分</string>
+    <string name="current_growth">成长值</string>
+    <string name="how_to_raise">如何升级？</string>
+    <string name="point_event">积分活动</string>
+    <string name="point_info">会员/积分说明</string>
+    <string name="account_settings">账户设置</string>
+    <string name="user_admin_user_name">修改用户名</string>
+    <string name="user_admin_modify">修改</string>
+    <string name="user_admin_modify_password">修改密码</string>
+    <string name="user_admin_not_set_password">未设置</string>
+    <string name="user_admin_binded_phone">已绑手机号</string>
+    <string name="user_admin_change">更换</string>
+    <string name="user_admin_manage_consignee">收货地址管理</string>
+    <string name="user_my_cards_title">我的银行卡</string>
+    <string name="dialog_title_logout">退出</string>
+    <string name="user_no_password_tips">温馨提醒：为了您的账户安全，请设置您的密码</string>
+    <string name="recommend">推荐</string>
+    <string name="daily_new_deal">每日推荐</string>
+    <string name="daily_new_deal_today">今日推荐</string>
+    <string name="order">订单</string>
+    <string name="order_unpaid">待付款</string>
+    <string name="order_paid">已付款</string>
+    <string name="lottery">抽奖单</string>
+    <string name="rest">其他</string>
+    <string name="voucher">代金券</string>
+    <string name="coupon">美团券</string>
+    <string name="my_coupon">我的美团券</string>
+    <string name="favorite">收藏夹</string>
+
     <!-- login -->
     <string name="login_username">请输入电话号码</string>
     <string name="login_password">密码</string>
     <string name="login_signin">登录</string>
+
+
 </resources>

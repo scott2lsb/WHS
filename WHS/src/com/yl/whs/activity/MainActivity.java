@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 import com.yl.whs.R;
 import com.yl.whs.fragment.HomeFragment;
+import com.yl.whs.fragment.MineFragment;
 import com.yl.whs.fragment.MoreFragment;
-import com.yl.whs.fragment.ProfileFragment;
 import com.yl.whs.fragment.ShopListFragment;
 
 /**
@@ -130,7 +130,7 @@ public class MainActivity extends BaseActivity {
                 mMoreTab.setSelected(false);
 
                 if (mProfileFragment == null) {
-                    mProfileFragment = new ProfileFragment();
+                    mProfileFragment = new MineFragment();
                     tans.add(R.id.container, mProfileFragment, TAG_PROFILE_FRAGMENT);
                 }
                 tans.show(mProfileFragment);

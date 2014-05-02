@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.yl.whs"
-          android:versionCode="18"
+          android:versionCode="1"
           android:versionName="1.0">
 
     <uses-sdk android:minSdkVersion="10"/>
@@ -31,6 +31,7 @@
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+
         <activity android:name=".activity.SplashActivity"
                   android:screenOrientation="portrait"
                   android:theme="@style/AppNoTitleBar">
@@ -47,6 +48,14 @@
         </activity>
 
         <activity android:name="com.yl.whs.activity.MainActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.yl.whs.activity.ShopDetailActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.yl.whs.activity.MyAccountActivity"
                   android:screenOrientation="portrait">
         </activity>
 
@@ -115,6 +124,5 @@
         <!--android:value="a3Bb1XeOO1guNB7azLYm4t2F"/>-->
 
     </application>
-
 
 </manifest>

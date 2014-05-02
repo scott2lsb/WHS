@@ -19,6 +19,6 @@
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
             android:scaleType="fitEnd"
-            android:src="@drawable/guidance_skip_selector"/>
+            android:src="@drawable/guide_skip_selector"/>
 
 </RelativeLayout>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        android:background="#fff7f7f7"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:background="#fff7f7f7">
     <RelativeLayout
             android:id="@+id/coupon"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
             android:background="@drawable/list_row_selector"
             android:paddingTop="10.0dip"
             android:paddingBottom="10.0dip"
-            android:layout_width="0.0dip"
-            android:layout_height="fill_parent"
             android:layout_weight="1.0">
         <ImageView
                 android:id="@+id/coupon_icon"
@@ -18,32 +18,34 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="13.0dip"
                 android:src="@drawable/ic_coupon"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/coupon"/>
+                android:layout_centerVertical="true"/>
+
         <FrameLayout
                 android:id="@+id/coupon_count_container"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/coupon_icon">
             <TextView
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/black2"
-                    android:layout_gravity="center"
                     android:id="@+id/coupon_count"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black2"
+                    android:layout_gravity="center"/>
             <ProgressBar
-                    android:layout_gravity="center"
                     android:id="@+id/coupon_progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="?android:attr/progressBarStyleSmall"/>
+                    android:layout_gravity="center"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:visibility="gone"/>
         </FrameLayout>
+
         <TextView
-                android:textAppearance="?android:textAppearanceSmall"
-                android:gravity="center_horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:gravity="center_horizontal"
                 android:layout_marginTop="3.0dip"
                 android:text="@string/my_coupon"
                 android:layout_toRightOf="@id/coupon_icon"
@@ -69,22 +71,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="13.0dip"
-                android:src="@drawable/ic_favorite"
-                android:contentDescription="@string/favorite"/>
+                android:src="@drawable/ic_favorite"/>
         <TextView
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@color/black2"
-                android:gravity="center_horizontal"
                 android:id="@+id/favorite_count"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black2"
+                android:gravity="center_horizontal"
                 android:text="0"
                 android:layout_toRightOf="@id/favorite_icon"/>
         <TextView
-                android:textAppearance="?android:textAppearanceSmall"
-                android:gravity="center_horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:gravity="center_horizontal"
                 android:layout_marginTop="3.0dip"
                 android:text="@string/favorite"
                 android:layout_toRightOf="@id/favorite_icon"

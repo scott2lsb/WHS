@@ -202,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/text_size_h10"
                         android:textColor="@color/white"
-                        android:background="@drawable/bg_global_lable_red"
+                        android:background="@drawable/bg_global_label_red"
                         android:paddingLeft="4.0dip"
                         android:paddingTop="2.0dip"
                         android:paddingRight="4.0dip"

@@ -67,6 +67,12 @@
                   android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".activity.FavoriteActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.MyCouponActivity"
+                  android:screenOrientation="portrait"/>
+
 
         <!--<service android:name="com.yl.whs.service.LocationService">-->
         <!--<intent-filter>-->

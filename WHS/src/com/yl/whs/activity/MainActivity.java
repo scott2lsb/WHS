@@ -21,7 +21,7 @@ import com.yl.whs.fragment.ShopListFragment;
 public class MainActivity extends BaseActivity {
 
     private static final String TAG_HOME_FRAGMENT = "home_fragment";
-    private static final String TAG_PROFILE_FRAGMENT = "profile_fragment";
+    private static final String TAG_MINE_FRAGMENT = "mine_fragment";
     private static final String TAG_SHOP_LIST_FRAGMENT = "shop_list_fragment";
     private static final String TAG_MORE_FRAGMENT = "more_fragment";
 
@@ -31,12 +31,12 @@ public class MainActivity extends BaseActivity {
     private FragmentManager mFragmentManager;
 
     private Fragment mHomeFragment;
-    private Fragment mProfileFragment;
+    private Fragment mMineFragment;
     private Fragment mShopListFragment;
     private Fragment mMoreFragment;
 
     private View mHomeTab;
-    private View mProfileTab;
+    private View mMineTab;
     private View mShopListTab;
     private View mMoreTab;
 
@@ -58,14 +58,14 @@ public class MainActivity extends BaseActivity {
 
     private void initActionBar() {
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
     }
 
     private void initUI() {
         setContentView(R.layout.activity_main);
 
         mHomeTab = findViewById(R.id.home_layout);
-        mProfileTab = findViewById(R.id.profile_layout);
+        mMineTab = findViewById(R.id.profile_layout);
         mShopListTab = findViewById(R.id.shop_list_layout);
         mMoreTab = findViewById(R.id.more_layout);
 
@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity {
         };
 
         mHomeTab.setOnClickListener(tabClickListener);
-        mProfileTab.setOnClickListener(tabClickListener);
+        mMineTab.setOnClickListener(tabClickListener);
         mShopListTab.setOnClickListener(tabClickListener);
         mMoreTab.setOnClickListener(tabClickListener);
     }
@@ -92,7 +92,7 @@ public class MainActivity extends BaseActivity {
         }
 
         mHomeFragment = mFragmentManager.findFragmentByTag(TAG_HOME_FRAGMENT);
-        mProfileFragment = mFragmentManager.findFragmentByTag(TAG_PROFILE_FRAGMENT);
+        mMineFragment = mFragmentManager.findFragmentByTag(TAG_MINE_FRAGMENT);
         mShopListFragment = mFragmentManager.findFragmentByTag(TAG_SHOP_LIST_FRAGMENT);
         mMoreFragment = mFragmentManager.findFragmentByTag(TAG_MORE_FRAGMENT);
 
@@ -101,7 +101,7 @@ public class MainActivity extends BaseActivity {
         switch (tabId) {
             case R.id.home_layout:
                 mHomeTab.setSelected(true);
-                mProfileTab.setSelected(false);
+                mMineTab.setSelected(false);
                 mShopListTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
@@ -110,8 +110,8 @@ public class MainActivity extends BaseActivity {
                     tans.add(R.id.container, mHomeFragment, TAG_HOME_FRAGMENT);
                 }
                 tans.show(mHomeFragment);
-                if (mProfileFragment != null) {
-                    tans.hide(mProfileFragment);
+                if (mMineFragment != null) {
+                    tans.hide(mMineFragment);
                 }
                 if (mShopListFragment != null) {
                     tans.hide(mShopListFragment);
@@ -125,15 +125,15 @@ public class MainActivity extends BaseActivity {
 
             case R.id.profile_layout:
                 mHomeTab.setSelected(false);
-                mProfileTab.setSelected(true);
+                mMineTab.setSelected(true);
                 mShopListTab.setSelected(false);
                 mMoreTab.setSelected(false);
 
-                if (mProfileFragment == null) {
-                    mProfileFragment = new MineFragment();
-                    tans.add(R.id.container, mProfileFragment, TAG_PROFILE_FRAGMENT);
+                if (mMineFragment == null) {
+                    mMineFragment = new MineFragment();
+                    tans.add(R.id.container, mMineFragment, TAG_MINE_FRAGMENT);
                 }
-                tans.show(mProfileFragment);
+                tans.show(mMineFragment);
                 if (mHomeFragment != null) {
                     tans.hide(mHomeFragment);
                 }
@@ -149,7 +149,7 @@ public class MainActivity extends BaseActivity {
 
             case R.id.shop_list_layout:
                 mHomeTab.setSelected(false);
-                mProfileTab.setSelected(false);
+                mMineTab.setSelected(false);
                 mShopListTab.setSelected(true);
                 mMoreTab.setSelected(false);
 
@@ -161,8 +161,8 @@ public class MainActivity extends BaseActivity {
                 if (mHomeFragment != null) {
                     tans.hide(mHomeFragment);
                 }
-                if (mProfileFragment != null) {
-                    tans.hide(mProfileFragment);
+                if (mMineFragment != null) {
+                    tans.hide(mMineFragment);
                 }
                 if (mMoreFragment != null) {
                     tans.hide(mMoreFragment);
@@ -173,7 +173,7 @@ public class MainActivity extends BaseActivity {
 
             case R.id.more_layout:
                 mHomeTab.setSelected(false);
-                mProfileTab.setSelected(false);
+                mMineTab.setSelected(false);
                 mShopListTab.setSelected(false);
                 mMoreTab.setSelected(true);
 
@@ -185,8 +185,8 @@ public class MainActivity extends BaseActivity {
                 if (mHomeFragment != null) {
                     tans.hide(mHomeFragment);
                 }
-                if (mProfileFragment != null) {
-                    tans.hide(mProfileFragment);
+                if (mMineFragment != null) {
+                    tans.hide(mMineFragment);
                 }
                 if (mShopListFragment != null) {
                     tans.hide(mShopListFragment);

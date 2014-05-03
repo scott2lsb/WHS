@@ -10,7 +10,7 @@
     <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar">
         <item name="background">@drawable/actionbar_bg</item>
         <item name="titleTextStyle">@style/TitleTextStyle</item>
-        <item name="displayOptions">showHome|homeAsUp|showTitle</item>
+        <item name="displayOptions">homeAsUp|showTitle</item>
     </style>
 
     <style name="AppNoTitleBar" parent="@style/AppTheme">

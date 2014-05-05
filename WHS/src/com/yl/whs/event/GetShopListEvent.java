@@ -7,6 +7,8 @@ import com.yl.whs.model.Shop;
  */
 public class GetShopListEvent extends AbstractEvent {
 
+    public boolean isLoadMore;
+
     public int errcode;
 
     public int hasMore;

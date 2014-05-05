@@ -12,28 +12,32 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yl.whs.R;
 import com.yl.whs.activity.ShopDetailActivity;
+import com.yl.whs.model.Shop;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShopListAdapter extends BaseAdapter {
 
     private Context mContext;
-    private ImageLoader mImageLoader = null;
     private LayoutInflater mInflater;
+    private List<Shop> mShopList;
 
-    public ShopListAdapter(Context context, ImageLoader mImageLoader) {
+    public ShopListAdapter(Context context, List<Shop> shopList) {
         this.mContext = context;
-        this.mImageLoader = mImageLoader;
         this.mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mShopList = shopList;
     }
 
     @Override
     public int getCount() {
-        return 10;
+        return mShopList != null ? mShopList.size() : 0;
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return mShopList.get(position);
     }
 
     @Override

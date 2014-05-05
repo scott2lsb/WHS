@@ -12,7 +12,7 @@ import de.greenrobot.event.EventBus;
  */
 public class ShopManager extends AbsManager {
 
-    protected ShopManager() {
+    public ShopManager() {
         super();
     }
 
@@ -34,6 +34,7 @@ public class ShopManager extends AbsManager {
 
                     if (response != null) {
                         GetShopListEvent event = new GetShopListEvent();
+                        event.isLoadMore = (lastId != 0);
                         event.errcode = response.errcode;
                         event.hasMore = response.hasMore;
                         event.lastId = response.lastId;

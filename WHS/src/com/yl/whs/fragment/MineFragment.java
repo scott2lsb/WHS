@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 import com.yl.whs.activity.FavoriteActivity;
 import com.yl.whs.activity.LoginActivity;
 import com.yl.whs.activity.MyAccountActivity;

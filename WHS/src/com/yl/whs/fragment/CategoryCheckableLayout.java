@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 
 /**
  * Created by zhangdi on 14-4-24.

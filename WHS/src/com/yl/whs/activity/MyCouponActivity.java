@@ -1,7 +1,8 @@
 package com.yl.whs.activity;
 
 import android.app.Activity;
-import android.os.Bundle;import com.yl.whs.R;
+import android.os.Bundle;
+import com.ylzw.whs.R;
 
 /**
  * Created by zhangdi on 14-5-3.

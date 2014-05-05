@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 import com.yl.whs.setting.SettingManager;
 
 public class SplashActivity extends BaseActivity {

@@ -1,6 +1,6 @@
 package com.yl.whs.app;
 
-import com.yl.whs.BuildConfig;
+import com.ylzw.whs.BuildConfig;
 
 /**
  * Created by zhangdi on 14-4-15.

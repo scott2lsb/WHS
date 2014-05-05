@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 
 public class GuideActivity extends Activity implements OnPageChangeListener {
 

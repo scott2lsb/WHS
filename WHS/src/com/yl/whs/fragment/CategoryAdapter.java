@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 
 import java.util.List;
 

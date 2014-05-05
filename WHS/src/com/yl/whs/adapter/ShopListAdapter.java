@@ -6,15 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 import com.yl.whs.activity.ShopDetailActivity;
 import com.yl.whs.model.Shop;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShopListAdapter extends BaseAdapter {

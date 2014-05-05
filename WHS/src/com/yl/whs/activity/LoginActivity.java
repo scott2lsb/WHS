@@ -1,7 +1,7 @@
 package com.yl.whs.activity;
 
 import android.os.Bundle;
-import com.yl.whs.R;
+import com.ylzw.whs.R;
 import com.yl.whs.setting.UserKeeper;
 
 /**

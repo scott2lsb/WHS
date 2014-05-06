@@ -9,4 +9,6 @@ public class Config {
 
     public static final boolean DEBUG = BuildConfig.DEBUG;
 
+    public static final boolean SERVER_ONLINE = false;
+
 }

@@ -5,7 +5,7 @@ import com.baidu.frontia.FrontiaApplication;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.ylzw.whs.BuildConfig;
+import com.plugin.common.utils.UtilsConfig;
 
 /**
  * Created by zhangdi on 14-4-14.
@@ -22,6 +22,9 @@ public class WHSApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        UtilsConfig.init(this);
+        UtilsConfig.UTILS_DEBUG = Config.DEBUG;
 
         FrontiaApplication.initFrontiaApplication(this);
 
@@ -47,7 +50,7 @@ public class WHSApplication extends Application {
                         .cacheOnDisc(true)
                         .considerExifParams(true)
                         .build());
-        if (BuildConfig.DEBUG) {
+        if (Config.DEBUG) {
             builder.writeDebugLogs();
         }
         ImageLoader.getInstance().init(builder.build());

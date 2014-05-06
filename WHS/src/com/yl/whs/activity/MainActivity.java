@@ -1,10 +1,10 @@
 package com.yl.whs.activity;
 
+import android.app.ActionBar;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -57,7 +57,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initActionBar() {
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
     }
 
@@ -88,7 +88,7 @@ public class MainActivity extends BaseActivity {
         mCurrSelectedTabId = tabId;
 
         if (mFragmentManager == null) {
-            mFragmentManager = getSupportFragmentManager();
+            mFragmentManager = getFragmentManager();
         }
 
         mHomeFragment = mFragmentManager.findFragmentByTag(TAG_HOME_FRAGMENT);
@@ -120,7 +120,7 @@ public class MainActivity extends BaseActivity {
                     tans.hide(mMoreFragment);
                 }
 
-                getSupportActionBar().setTitle(R.string.title_home);
+                getActionBar().setTitle(R.string.title_home);
                 break;
 
             case R.id.profile_layout:
@@ -144,7 +144,7 @@ public class MainActivity extends BaseActivity {
                     tans.hide(mMoreFragment);
                 }
 
-                getSupportActionBar().setTitle(R.string.title_profile);
+                getActionBar().setTitle(R.string.title_profile);
                 break;
 
             case R.id.shop_list_layout:
@@ -168,7 +168,7 @@ public class MainActivity extends BaseActivity {
                     tans.hide(mMoreFragment);
                 }
 
-                getSupportActionBar().setTitle(R.string.title_shops);
+                getActionBar().setTitle(R.string.title_shops);
                 break;
 
             case R.id.more_layout:
@@ -192,7 +192,7 @@ public class MainActivity extends BaseActivity {
                     tans.hide(mShopListFragment);
                 }
 
-                getSupportActionBar().setTitle(R.string.title_more);
+                getActionBar().setTitle(R.string.title_more);
                 break;
 
         }

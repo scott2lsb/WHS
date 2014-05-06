@@ -26,12 +26,12 @@
                        android:adjustViewBounds="true"/>
 
             <ImageView
-                    android:layout_gravity="top|left|center"
                     android:id="@+id/preferential"
+                    android:layout_gravity="top|left|center"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_global_lable_favorable"/>
+                    android:src="@drawable/ic_global_label_favorable"/>
         </FrameLayout>
 
         <LinearLayout
@@ -48,7 +48,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="北京纯美婚纱摄影"
                     android:drawablePadding="5.0dip"/>
 
             <LinearLayout

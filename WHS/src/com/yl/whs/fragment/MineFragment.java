@@ -2,7 +2,6 @@ package com.yl.whs.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,7 @@ import com.yl.whs.setting.UserKeeper;
 /**
  * Created by zhangdi on 14-4-7.
  */
-public class MineFragment extends Fragment {
+public class MineFragment extends BaseFragment {
 
     private View mRootView;
 

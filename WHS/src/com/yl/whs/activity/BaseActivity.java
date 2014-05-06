@@ -1,14 +1,15 @@
 package com.yl.whs.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+
 import android.view.MenuItem;
 import com.ylzw.whs.R;
 
 /**
  * Created by zhangdi on 14-4-20.
  */
-public abstract class BaseActivity extends ActionBarActivity {
+public abstract class BaseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

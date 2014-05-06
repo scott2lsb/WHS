@@ -7,13 +7,16 @@ import com.plugin.internet.core.NetWorkException;
 import com.plugin.internet.core.RequestBase;
 import com.plugin.internet.core.ResponseBase;
 import com.plugin.internet.core.annotations.UseHttps;
+import com.yl.whs.app.Config;
 
 /**
  * Created by zhangdi on 14-4-18.
  */
 public class WHSRequestBase<ResponseBase> extends RequestBase<ResponseBase> {
 
-    public static final String BASE_URL = "http://api.wohuisheng.net/";
+    public static final String BASE_URL = Config.SERVER_ONLINE ?
+            "http://api.wohuisheng.net/" :
+            "http://218.7.160.98:9090/";
 
     public static final String SECRET_KEY = "whs_123456";
 

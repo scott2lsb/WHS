@@ -1,12 +1,14 @@
 package com.yl.whs.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.ylzw.whs.R;
 import com.yl.whs.activity.ShopDetailActivity;
 import com.yl.whs.model.Shop;
@@ -44,7 +46,6 @@ public class ShopListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.shop_list_item, null);
             holder = new ViewHolder(convertView);
@@ -53,11 +54,16 @@ public class ShopListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        final Shop shop = (Shop) getItem(position);
+
+        ImageLoader.getInstance().displayImage(shop.sImage, holder.image);
+
+        holder.name.setText(shop.name);
+
         holder.contentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, ShopDetailActivity.class);
-                mContext.startActivity(intent);
+                ShopDetailActivity.startActivity(mContext, shop);
             }
         });
 
@@ -66,9 +72,13 @@ public class ShopListAdapter extends BaseAdapter {
 
     static final class ViewHolder {
         View contentView;
+        ImageView image;
+        TextView name;
 
         public ViewHolder(View convertView) {
             contentView = convertView.findViewById(R.id.rl_content);
+            image = (ImageView) convertView.findViewById(R.id.image);
+            name = (TextView) convertView.findViewById(R.id.name);
         }
     }
 }

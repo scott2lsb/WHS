@@ -2,16 +2,10 @@ package com.yl.whs.model;
 
 import com.plugin.internet.core.json.JsonProperty;
 
-import java.io.Serializable;
-
 /**
- * Created by zhangdi on 14-4-25.
- * 商家基本信息，包括团购和优惠券
+ * Created by zhangdi on 14-5-5.
  */
-public class Shop implements Serializable {
-
-    public static final int SHOP_TYPE_COUPON = 1;
-    public static final int SHOP_TYPE_TUAN = 2;
+public class ShopDetail {
 
     @JsonProperty("name")
     public String name;
@@ -42,5 +36,4 @@ public class Shop implements Serializable {
 
     @JsonProperty("sImage")
     public String sImage;
-
 }

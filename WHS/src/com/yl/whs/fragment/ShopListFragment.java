@@ -126,7 +126,7 @@ public class ShopListFragment extends BaseFragment implements View.OnClickListen
                 mShopList.clear();
             }
             if (event.shops != null) {
-                mShopList.addAll(Arrays.asList(event.shops));
+                mShopList.addAll(event.shops);
             }
             mShopListAdapter.notifyDataSetChanged();
         }

@@ -13,5 +13,5 @@ public class ScoreVouchersResponse extends ResponseBase {
 
     @JsonProperty("errmsg")
     public String errmsg;
-    
+
 }

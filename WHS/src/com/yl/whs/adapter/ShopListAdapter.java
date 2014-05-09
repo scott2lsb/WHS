@@ -56,9 +56,9 @@ public class ShopListAdapter extends BaseAdapter {
 
         final Shop shop = (Shop) getItem(position);
 
-        ImageLoader.getInstance().displayImage(shop.sImage, holder.image);
+        ImageLoader.getInstance().displayImage(shop.logo, holder.image);
 
-        holder.name.setText(shop.name);
+        holder.name.setText(shop.shopName);
 
         holder.contentView.setOnClickListener(new View.OnClickListener() {
             @Override

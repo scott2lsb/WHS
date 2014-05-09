@@ -5,13 +5,9 @@ import com.plugin.internet.core.json.JsonProperty;
 import java.io.Serializable;
 
 /**
- * Created by zhangdi on 14-4-25.
- * 商家基本信息，包括团购和优惠券
+ * Created by zhangdi on 14-5-9.
  */
-public class Shop implements Serializable {
-
-    public static final int SHOP_TYPE_COUPON = 1;
-    public static final int SHOP_TYPE_TUAN = 2;
+public class TuanCollect implements Serializable {
 
     @JsonProperty("shopName")
     public String shopName;
@@ -39,8 +35,5 @@ public class Shop implements Serializable {
 
     @JsonProperty("bought")
     public int bought;
-
-    @JsonProperty("couponCount")
-    public int couponCount;
 
 }

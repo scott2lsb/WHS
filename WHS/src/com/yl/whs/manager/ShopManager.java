@@ -5,6 +5,7 @@ import com.plugin.internet.InternetUtils;
 import com.plugin.internet.core.NetWorkException;
 import com.yl.whs.api.shop.*;
 import com.yl.whs.event.*;
+import com.yl.whs.model.Shop;
 import de.greenrobot.event.EventBus;
 
 /**
@@ -89,24 +90,41 @@ public class ShopManager extends AbsManager {
         });
     }
 
-    public void getShopById(final int shopId, final int shopType) {
+    public void getShopDetail(final int shopId, final int shopType) {
         CustomThreadPool.asyncWork(new Runnable() {
             @Override
             public void run() {
                 try {
-                    GetShopRequest request = new GetShopRequest(
-                            shopId, shopType);
-                    GetShopResponse response = InternetUtils.request(
-                            getContext(), request);
+                    GetShopDetailEvent event = new GetShopDetailEvent();
+                    event.shopId = shopId;
+                    event.shopType = shopType;
+
+                    boolean reqSuc = false;
+                    if (shopType == Shop.SHOP_TYPE_COUPON) {
+                        GetCouponDetailRequest req = new GetCouponDetailRequest(shopId);
+                        GetCouponDetailResponse resp = InternetUtils.request(
+                                getContext(), req);
+                        if (resp != null) {
+                            reqSuc = true;
+                            event.errcode = resp.errcode;
+                            event.shop = resp.shop;
+                        }
+                    } else {
+                        GetTuanDetailRequest req = new GetTuanDetailRequest(shopId);
+                        GetTuanDetailResponse resp = InternetUtils.request(
+                                getContext(), req);
+                        if (resp != null) {
+                            reqSuc = true;
+                            event.errcode = resp.errcode;
+                            event.shop = resp.shop;
+                        }
+                    }
 
                     if (isDestroy()) {
                         return;
                     }
 
-                    if (response != null) {
-                        GetShopEvent event = new GetShopEvent();
-                        event.errcode = response.errcode;
-                        event.shop = response.shop;
+                    if (reqSuc) {
                         EventBus.getDefault().post(event);
                         return;
                     }
@@ -116,7 +134,7 @@ public class ShopManager extends AbsManager {
 
                 if (!isDestroy()) {
                     NetworkExceptionEvent event = new NetworkExceptionEvent();
-                    event.relatedEventTag = GetShopEvent.class.getSimpleName();
+                    event.relatedEventTag = GetShopDetailEvent.class.getSimpleName();
                     EventBus.getDefault().post(event);
                 }
             }

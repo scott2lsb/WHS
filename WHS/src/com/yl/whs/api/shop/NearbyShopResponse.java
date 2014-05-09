@@ -4,6 +4,8 @@ import com.plugin.internet.core.ResponseBase;
 import com.plugin.internet.core.json.JsonProperty;
 import com.yl.whs.model.Shop;
 
+import java.util.List;
+
 /**
  * Created by zhangdi on 14-4-26.
  */
@@ -13,6 +15,6 @@ public class NearbyShopResponse extends ResponseBase {
     public int errcode;
 
     @JsonProperty("shops")
-    public Shop[] shops;
+    public List<Shop> shops;
     
 }

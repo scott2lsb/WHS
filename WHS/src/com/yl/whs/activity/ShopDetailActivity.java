@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-import com.yl.whs.event.GetShopEvent;
+import com.yl.whs.event.GetShopDetailEvent;
 import com.yl.whs.manager.CommentManager;
 import com.yl.whs.manager.ShopManager;
 import com.yl.whs.model.Shop;
@@ -51,7 +51,7 @@ public class ShopDetailActivity extends BaseActivity {
 
         EventBus.getDefault().register(this);
 
-        mShopManager.getShopById(mShop.shopId, mShop.shopType);
+        mShopManager.getShopDetail(mShop.shopId, mShop.shopType);
     }
 
     private void initUI() {
@@ -72,7 +72,7 @@ public class ShopDetailActivity extends BaseActivity {
         mCommentManager.destroy();
     }
 
-    public void onEventMainThread(GetShopEvent event) {
+    public void onEventMainThread(GetShopDetailEvent event) {
         if (event.errcode == 0) {
 
         }

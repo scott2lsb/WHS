@@ -4,6 +4,8 @@ import com.plugin.internet.core.ResponseBase;
 import com.plugin.internet.core.json.JsonProperty;
 import com.yl.whs.model.Shop;
 
+import java.util.List;
+
 /**
  * Created by zhangdi on 14-4-25.
  */
@@ -18,7 +20,10 @@ public class ShopListResponse extends ResponseBase {
     @JsonProperty("lastId")
     public int lastId;
 
+    @JsonProperty("imageRoot")
+    public String imageRoot;
+
     @JsonProperty("shops")
-    public Shop[] shops;
+    public List<Shop> shops;
 
 }

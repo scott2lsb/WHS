@@ -19,9 +19,6 @@ public class Comment implements Serializable {
     @JsonProperty("commentTime")
     public long commentTime;
 
-    @JsonProperty("userName")
-    public String userName;
-
     @JsonProperty("score")
     public int score;
 

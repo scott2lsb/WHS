@@ -1,18 +1,16 @@
 package com.yl.whs.api.shop;
 
 import com.plugin.internet.core.annotations.HttpMethod;
-import com.plugin.internet.core.annotations.NeedTicket;
 import com.plugin.internet.core.annotations.RequiredParam;
 import com.plugin.internet.core.annotations.RestMethodUrl;
 import com.yl.whs.api.WHSRequestBase;
 
 /**
- * Created by zhangdi on 14-4-25.
+ * Created by zhangdi on 14-5-9.
  */
-@NeedTicket
 @RestMethodUrl("shop/listbyid")
 @HttpMethod("GET")
-public class GetShopRequest extends WHSRequestBase<GetShopResponse> {
+public class GetCouponDetailRequest extends WHSRequestBase<GetCouponDetailResponse> {
 
     @RequiredParam("shopId")
     private int shopId;
@@ -20,9 +18,9 @@ public class GetShopRequest extends WHSRequestBase<GetShopResponse> {
     @RequiredParam("shopType")
     private int shopType;
 
-    public GetShopRequest(int shopId, int shopType) {
+    public GetCouponDetailRequest(int shopId) {
         this.shopId = shopId;
-        this.shopType = shopType;
+        this.shopType = 1;
     }
 
 }

@@ -16,6 +16,12 @@ public class UserKeeper {
         return WHSApplication.getInstance();
     }
 
+    public static void clear() {
+        SharedPreferences pref = getContext().getSharedPreferences(
+                PREFERENCES_NAME, Context.MODE_PRIVATE);
+        pref.edit().clear().commit();
+    }
+
     public static int getUserId() {
         SharedPreferences pref = getContext().getSharedPreferences(
                 PREFERENCES_NAME, Context.MODE_PRIVATE);
@@ -28,28 +34,40 @@ public class UserKeeper {
         pref.edit().putInt("userId", userId).commit();
     }
 
-    public static String getUsername() {
+    public static String getNickname() {
         SharedPreferences pref = getContext().getSharedPreferences(
                 PREFERENCES_NAME, Context.MODE_PRIVATE);
-        return pref.getString("username", null);
+        return pref.getString("nickname", null);
     }
 
-    public static void setUsername(String username) {
+    public static void setNickname(String nickname) {
         SharedPreferences pref = getContext().getSharedPreferences(
                 PREFERENCES_NAME, Context.MODE_PRIVATE);
-        pref.edit().putString("username", username).commit();
+        pref.edit().putString("nickname", nickname).commit();
     }
 
-    public static int getPoint() {
+    public static String getToken() {
         SharedPreferences pref = getContext().getSharedPreferences(
                 PREFERENCES_NAME, Context.MODE_PRIVATE);
-        return pref.getInt("point", 0);
+        return pref.getString("token", null);
     }
 
-    public static void setPoint(int point) {
+    public static void setToken(String token) {
         SharedPreferences pref = getContext().getSharedPreferences(
                 PREFERENCES_NAME, Context.MODE_PRIVATE);
-        pref.edit().putInt("point", point).commit();
+        pref.edit().putString("token", token).commit();
+    }
+
+    public static int getScore() {
+        SharedPreferences pref = getContext().getSharedPreferences(
+                PREFERENCES_NAME, Context.MODE_PRIVATE);
+        return pref.getInt("score", 0);
+    }
+
+    public static void setScore(int score) {
+        SharedPreferences pref = getContext().getSharedPreferences(
+                PREFERENCES_NAME, Context.MODE_PRIVATE);
+        pref.edit().putInt("score", score).commit();
     }
 
 }

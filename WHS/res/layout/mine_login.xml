@@ -101,7 +101,8 @@
                         android:id="@+id/point_progress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="?android:attr/progressBarStyleSmall"/>
+                        style="?android:attr/progressBarStyleSmall"
+                        android:visibility="gone"/>
             </LinearLayout>
         </LinearLayout>
 

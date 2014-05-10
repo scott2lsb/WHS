@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <CheckBox android:id="@+id/user_agreement_checkbox"
+              android:layout_width="25.0dip"
+              android:layout_height="25.0dip"
+              android:layout_marginRight="5.0dip"
+              android:checked="true"
+              android:button="@drawable/ic_check"/>
+    <TextView android:textSize="14.0sp"
+              android:textColor="#ff666666"
+              android:id="@+id/user_agreement_text_pre"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/i_accept"/>
+    <TextView android:textSize="14.0sp"
+              android:textColor="@color/green"
+              android:id="@+id/user_agreement_text_link"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="沃惠省用户协议"/>
+</LinearLayout>

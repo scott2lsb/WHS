@@ -31,7 +31,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:textAppearanceMedium"
                     android:textColor="@color/black2"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:text="0"/>
             <ProgressBar
                     android:id="@+id/coupon_progress"
                     android:layout_width="wrap_content"

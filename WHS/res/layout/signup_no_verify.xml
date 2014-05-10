@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip"
+                  android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="20.0dip"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="20.0dip">
+            <EditText android:textSize="@dimen/text_size_h6" android:textColor="#ff000000"
+                      android:textColorHint="@color/black3" android:id="@+id/name"
+                      android:background="@drawable/bg_edit_selector" android:paddingLeft="10.0dip"
+                      android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:hint="@string/nick_name_signup_name_hint" android:singleLine="true"
+                      android:inputType="textMultiLine|textEmailAddress"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_size_h7" android:textColor="@color/black2"
+                  android:id="@+id/nick_name_check_text" android:visibility="gone" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:layout_marginTop="20.0dip"
+                  android:drawableLeft="@drawable/ic_smsverify_sms_error_30" android:drawablePadding="5.0dip"/>
+        <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="20.0dip"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="20.0dip">
+            <EditText android:textSize="@dimen/text_size_h6" android:textColor="#ff000000"
+                      android:textColorHint="@color/black3" android:id="@+id/password" android:paddingLeft="10.0dip"
+                      android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:hint="@string/nick_name_signup_password_hint" android:singleLine="true"
+                      android:inputType="textMultiLine|textPassword"/>
+            <EditText android:textSize="@dimen/text_size_h6" android:textColor="#ff000000"
+                      android:textColorHint="@color/black3" android:id="@+id/password_confirm"
+                      android:paddingLeft="10.0dip" android:scrollbars="none" android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" android:hint="@string/nick_name_signup_password_hint_confirm"
+                      android:singleLine="true" android:inputType="textMultiLine|textPassword"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                          android:id="@+id/captcha_zone" android:paddingTop="10.0dip" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content">
+                <EditText android:textSize="@dimen/text_size_h6" android:textColorHint="@color/black3"
+                          android:layout_gravity="bottom" android:id="@+id/captcha"
+                          android:background="@drawable/bg_edit_selector" android:paddingLeft="10.0dip"
+                          android:layout_width="100.0dip" android:layout_height="wrap_content"
+                          android:hint="@string/login_captcha_is_null" android:singleLine="true"
+                          android:inputType="textCapCharacters|textMultiLine|textEmailAddress"/>
+                <FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="10.0dip"
+                             android:paddingRight="10.0dip" android:layout_width="104.0dip"
+                             android:layout_height="40.0dip" android:layout_marginBottom="1.0dip">
+                    <ProgressBar android:layout_gravity="center" android:id="@+id/captcha_loading_progress"
+                                 android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                 style="@style/ProgressBarStyleSmall"/>
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/captcha_image"
+                               android:layout_width="84.0dip" android:layout_height="40.0dip"
+                               android:scaleType="fitXY"/>
+                </FrameLayout>
+                <TextView android:id="@+id/tv_captcha_change" android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" android:text="@string/login_captcha_change"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/layout_login" android:layout_width="fill_parent"
+                     android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <Button android:textSize="@dimen/text_size_h3" android:textColor="@color/white" android:gravity="center"
+                    android:id="@+id/btn_sign_up" android:background="@drawable/bg_cornered_green"
+                    android:layout_width="fill_parent" android:layout_height="45.0dip"
+                    android:text="@string/signup_btn_text"/>
+            <ProgressBar android:layout_gravity="right|center" android:id="@+id/login_progress"
+                         android:visibility="gone"
+                         android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:layout_marginRight="5.0dip" style="@style/ProgressBarStyleSmall"/>
+        </FrameLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip"
+                 layout="@layout/layout_signup_terms"/>
+    </LinearLayout>
+</ScrollView>

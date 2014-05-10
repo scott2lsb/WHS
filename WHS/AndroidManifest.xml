@@ -52,25 +52,42 @@
         </activity>
 
         <activity android:name="com.yl.whs.activity.ShopDetailActivity"
+                  android:label="@string/title_shop_detail"
                   android:screenOrientation="portrait">
         </activity>
 
         <activity android:name="com.yl.whs.activity.MyAccountActivity"
+                  android:label="@string/title_my_account"
                   android:screenOrientation="portrait">
         </activity>
 
         <activity android:name="com.yl.whs.activity.LoginActivity"
+                  android:label="@string/title_login"
                   android:screenOrientation="portrait">
         </activity>
 
         <activity android:name="com.yl.whs.activity.RegisterActivity"
+                  android:label="@string/title_register"
                   android:screenOrientation="portrait">
         </activity>
 
         <activity android:name="com.yl.whs.activity.FavoriteActivity"
+                  android:label="@string/title_favorite"
                   android:screenOrientation="portrait"/>
 
         <activity android:name="com.yl.whs.activity.MyCouponActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.yl.whs.activity.ModifyNicknameActivity"
+                  android:label="@string/title_modify_nickname"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.yl.whs.activity.ModifyPasswordActivity"
+                  android:label="@string/title_modify_password"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name="com.yl.whs.activity.ManageAddressActivity"
+                  android:label="@string/title_manage_address"
                   android:screenOrientation="portrait"/>
 
 

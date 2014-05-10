@@ -7,12 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import com.yl.whs.event.GetMyInfoEvent;
+import com.yl.whs.event.GetShopListEvent;
+import com.yl.whs.event.NetworkExceptionEvent;
+import com.yl.whs.manager.MyInfoManager;
 import com.ylzw.whs.R;
 import com.yl.whs.activity.FavoriteActivity;
 import com.yl.whs.activity.LoginActivity;
 import com.yl.whs.activity.MyAccountActivity;
 import com.yl.whs.activity.MyCouponActivity;
 import com.yl.whs.setting.UserKeeper;
+import de.greenrobot.event.EventBus;
 
 /**
  * Created by zhangdi on 14-4-7.
@@ -42,6 +47,8 @@ public class MineFragment extends BaseFragment {
     private View mPointVoucherContainer;
     private TextView mPointVoucherCountTv;
 
+    private MyInfoManager mMyInfoManager;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_mine, null);
@@ -49,7 +56,20 @@ public class MineFragment extends BaseFragment {
         initCouponAndFavorite();
         initPaidUI();
         initVoucherUI();
+
+        EventBus.getDefault().register(this);
+        mMyInfoManager = new MyInfoManager();
+        mMyInfoManager.getMyInfo();
+
         return mRootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        EventBus.getDefault().unregister(this);
+        mMyInfoManager.destroy();
     }
 
     @Override
@@ -82,9 +102,8 @@ public class MineFragment extends BaseFragment {
         if (UserKeeper.getUserId() > 0) {
             mLoginContainer.setVisibility(View.VISIBLE);
             mNotLoginContainer.setVisibility(View.GONE);
-            mUsernameTv.setText(UserKeeper.getUsername());
-            int point = UserKeeper.getPoint();
-            mPointTv.setText(String.format(getString(R.string.whs_point), point));
+            mUsernameTv.setText(UserKeeper.getNickname());
+            mPointTv.setText(String.format(getString(R.string.whs_point), UserKeeper.getScore()));
         } else {
             mLoginContainer.setVisibility(View.GONE);
             mNotLoginContainer.setVisibility(View.VISIBLE);
@@ -226,6 +245,20 @@ public class MineFragment extends BaseFragment {
 
     private void pointVoucher() {
 
+    }
+
+    public void onEventMainThread(GetMyInfoEvent event) {
+        if (event.errcode == 0) {
+            UserKeeper.setNickname(event.nickName);
+            UserKeeper.setScore(event.score);
+            updateLoginUI();
+        }
+    }
+
+    public void onEventMainThread(NetworkExceptionEvent event) {
+        if (event.relatedEventTag == GetMyInfoEvent.class.getSimpleName()) {
+
+        }
     }
 
 }

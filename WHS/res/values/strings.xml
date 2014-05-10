@@ -9,6 +9,16 @@
     <string name="title_profile">我的</string>
     <string name="title_more">更多</string>
 
+    <!-- activity title -->
+    <string name="title_my_account">我的账户</string>
+    <string name="title_login">登录</string>
+    <string name="title_register">注册</string>
+    <string name="title_favorite">收藏</string>
+    <string name="title_modify_nickname">修改用户名</string>
+    <string name="title_modify_password">修改密码</string>
+    <string name="title_manage_address">收货人信息</string>
+    <string name="title_shop_detail">商家详情</string>
+
     <!-- main tab -->
     <string name="main_tab_home">主页</string>
     <string name="main_tab_shops">商家</string>
@@ -24,7 +34,7 @@
     <string name="user_not_login">您还没有登录~</string>
     <string name="login">登录</string>
     <string name="point_exchange">积分抵现金</string>
-    <string name="whs_point">沃惠积分：%d</string>
+    <string name="whs_point">积分：%d</string>
 
     <string name="my_coupon">沃惠券</string>
     <string name="favorite">收藏夹</string>
@@ -41,6 +51,7 @@
     <string name="voucher">代金券</string>
     <string name="point_voucher">积分换代金券</string>
 
+    <!-- 我的账户 -->
     <string name="user_point">会员积分</string>
     <string name="current_growth">成长值</string>
     <string name="how_to_raise">如何升级？</string>
@@ -60,7 +71,28 @@
     <!-- login -->
     <string name="login_username">请输入电话号码</string>
     <string name="login_password">密码</string>
-    <string name="login_signin">登录</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">注册</string>
 
+    <!-- register -->
+    <string name="i_accept">我已阅读并接受</string>
+    <string name="signup_step1">1 输入手机号码</string>
+    <string name="signup_step2">2 输入验证码</string>
+    <string name="signup_step3">3 设置密码</string>
+    <string name="input_your_phone_num">请输入您的手机号</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="input_verify_code">请输入手机获取的短信验证码</string>
+    <string name="submit_verify_code">提交验证码</string>
+    <string name="password_hint">6–32位字母数字符号组合</string>
+    <string name="password_confirm_hint">请再次输入设置的密码</string>
+    <string name="register">注册</string>
+    <string name="verify_phone">验证手机</string>
+    <string name="show_after_sms_sent">已发送，查看结果</string>
+    <string name="nick_name_signup_name_hint">请输入4-16位用户名，用户名不可为手机号或带有特殊字符</string>
+    <string name="nick_name_signup_password_hint">请输入6-32位密码</string>
+    <string name="nick_name_signup_password_hint_confirm">请再次确认密码</string>
+    <string name="login_captcha_is_null">请输入验证码</string>
+    <string name="login_captcha_change">"看不清？\n换一张"</string>
+    <string name="signup_btn_text">立即注册</string>
 
 </resources>

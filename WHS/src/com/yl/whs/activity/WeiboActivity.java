@@ -20,7 +20,7 @@ import com.yl.whs.share.Constants;
 /**
  * Created by zhangdi on 14-5-1.
  */
-public abstract class WeiboActivity extends BaseActivity implements IWeiboHandler.Response{
+public abstract class WeiboActivity extends BaseActivity implements IWeiboHandler.Response {
 
     private WeiboAuth mWeiboAuth;
     private Oauth2AccessToken mAccessToken;
